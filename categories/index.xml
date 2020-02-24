@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Linn&#39;s Blog</title>
-    <link>https://YangLinzhuo.github.io/categories/</link>
+    <link>https://yanglinzhuo.github.io/categories/</link>
     <description>Recent content in Categories on Linn&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;Linn 2019</copyright>
     
-	<atom:link href="https://YangLinzhuo.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yanglinzhuo.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
