@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.65.3" />
     
     
 <script type="application/javascript">
@@ -20,12 +19,12 @@ if (!doNotTrack) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-      Linn&#39;s Blog
-      
+  Emoji Support &ndash; Linn&#39;s Blog
+
     </title>
     
     
-    <meta name="description" property="og:description" content="Linn&#39;s Personal Blog">
+    <meta name="description" property="og:description" content="Guide to emoji usage in Hugo|Linn&#39;s Personal Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="Linn&#39;s Blog">
@@ -57,7 +56,7 @@ if (!doNotTrack) {
     
     
     
-    <a class="UnderlineNav-item selected" href="/">
+    <a class="UnderlineNav-item " href="/">
       
       <span>Hugo-Primer</span>
     </a>
@@ -88,38 +87,85 @@ if (!doNotTrack) {
       <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
         
 
-<article>
-  <h1>Hugo-Primer</h1>
-  <section>
-    <p><strong>A simple and beautiful Hugo theme based on GitHub&rsquo;s Primer CSS</strong></p>
-<p>This theme would be a perfect fit if you are used to GitHub style pages.<br>
-Hugo-Primer is a theme based on GitHub style css: Primer, and adds some blog like features onto it.</p>
-<p>Visit the <a href="https://github.com/qqhann/hugo-primer">homepage</a> to try it now, and leave me a star if you like it!</p>
-<h2 id="examplesite">ExampleSite</h2>
-<p>Use the <code>exampleSite</code> as a reference, or copy to quick satart.</p>
-<p>As you navicate through the exampleSite menu,
-&ldquo;About&rdquo; and &ldquo;Blog Example&rdquo; contents are from hugoBasicExample provided by hugo.</p>
-<p>&ldquo;Hugo-Primer&rdquo; is provided by hugo-primer.
-And all of them are optimized to demonstrate how to use hugo-primer.</p>
-<p>Notice how we utilize <code>menu: &quot;main&quot;</code> in the frontmatter.
-And <code>weight: 1</code> decides the order they appear in the nav bar.</p>
-<p>Finally, <code>type: &quot;top&quot;</code> is a special indicatior.
-It is supposed to be used at top page.
-This page use it too.
-As you might notice, &ldquo;top&rdquo; page will not have toc like other single type page.</p>
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">Emoji Support</div>
+  </div>
+  <div class="Subhead-description">
+    
 
+
+
+
+<a href='/tags/emoji' class="muted-link">
+  <span class="Label Label--gray">emoji</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2019-03-05. Published at: 2019-03-05.">
+        
+          Published: 2019-03-05
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom">
+    <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site’s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">.emoji {
+font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+}</code></pre></div>
+
+<style>
+.emojify {
+ font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+ font-size: 2rem;
+ vertical-align: middle;
+}
+@media screen and (max-width:650px) {
+    .nowrap {
+ display: block;
+ margin: 25px 0;
+}
+}
+</style>
+  </section>
+
+  <section>
+    
+      
+    
   </section>
 </article>
-
 
       </div>
 
       <div id="side" class="pr-1 bg-white">
         <aside class="pr-3">
           
-          <div id="toc" class="mb-3">
-          </div>
-          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>Emoji Support</b><nav id="TableOfContents"></nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
         </aside>
       </div>
 

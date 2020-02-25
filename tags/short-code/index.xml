@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>short code on Linn&#39;s Blog</title>
+    <link>https://yanglinzhuo.github.io/tags/short-code/</link>
+    <description>Recent content in short code on Linn&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>&amp;copy;Linn {year}</copyright>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yanglinzhuo.github.io/tags/short-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>中文测试</title>
+      <link>https://yanglinzhuo.github.io/blog/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/blog/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95/</guid>
+      <description>测试中文显示。 日本語入力できないか？ 数学符号输入 $\pi$ italic test 明日 (みらい) My heart is broken. (I&amp;#39;m happy for that.)</description>
+    </item>
+    
+  </channel>
+</rss>

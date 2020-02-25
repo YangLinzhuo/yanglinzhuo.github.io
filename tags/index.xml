@@ -5,11 +5,111 @@
     <link>https://yanglinzhuo.github.io/tags/</link>
     <description>Recent content in Tags on Linn&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <copyright>&amp;copy;Linn 2019</copyright>
+    <language>zh-cn</language>
+    <copyright>&amp;copy;Linn {year}</copyright>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yanglinzhuo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>chinese test</title>
+      <link>https://yanglinzhuo.github.io/tags/chinese-test/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/chinese-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>japanese test</title>
+      <link>https://yanglinzhuo.github.io/tags/japanese-test/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/japanese-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math test</title>
+      <link>https://yanglinzhuo.github.io/tags/math-test/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/math-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>short code</title>
+      <link>https://yanglinzhuo.github.io/tags/short-code/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/short-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://yanglinzhuo.github.io/tags/css/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://yanglinzhuo.github.io/tags/html/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://yanglinzhuo.github.io/tags/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://yanglinzhuo.github.io/tags/themes/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text</title>
+      <link>https://yanglinzhuo.github.io/tags/text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emoji</title>
+      <link>https://yanglinzhuo.github.io/tags/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/emoji/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://yanglinzhuo.github.io/tags/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yanglinzhuo.github.io/tags/about/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
