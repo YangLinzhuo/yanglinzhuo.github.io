@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>林•初夏 • Posts by &#34;configs&#34; tag</title>
+        <link>https://linn-ylz.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 09 Aug 2022 21:26:54 +0800</pubDate>
+        <lastBuildDate>Tue, 09 Aug 2022 21:26:54 +0800</lastBuildDate>
+        <category>Computer-Science</category>
+        <category>Configs</category>
+        <category>CUDA</category>
+        <category>PyTorch</category>
+        <category>TiddlyWiki</category>
+        <category>Fishing</category>
+        <category>Cpp</category>
+        <category>Emacs</category>
+        <category>Hexo</category>
+        <category>Valine</category>
+        <category>Waline</category>
+        <category>AncientBook</category>
+        <category>Book</category>
+        <category>Essay</category>
+        <category>Game</category>
+        <category>Music</category>
+        <category>Movie</category>
+        <category>Algorithm</category>
+        <category>Binary-Search</category>
+        <category>Coding-Interviews</category>
+        <category>WSL2</category>
+        <category>CLion</category>
+        <category>Oh-My-Zsh</category>
+        <category>WSL</category>
+        <category>Programming-Pearls</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/</guid>
+            <title>安装 WSL2</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/</link>
+            <category>Computer-Science</category>
+            <category>Configs</category>
+            <category>WSL2</category>
+            <pubDate>Tue, 09 Aug 2022 21:26:54 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;之前在自己的笔记本上安装过  &lt;code&gt;Windows&lt;/code&gt;  的  &lt;code&gt;Linux&lt;/code&gt;  子系统。最近新配置了一台台式机，又需要重新配置，在过程中也稍稍遇到了一些问题，在这里记录下来以备后续的使用。&lt;/p&gt;
+&lt;h1 id=&#34;安装-wsl2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-wsl2&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;WSL2&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;这里的安装过程全程参照了这个链接的内容👉：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb3d3dy5zcGVuY2Vyd29vLmNvbS8=&#34;&gt;戳此链接&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;这里以其教程作为主要参考，并补充安装过程中遇到的问题的解决方式。&lt;/p&gt;
+&lt;h2 id=&#34;开启-hyper-v-和-linux-子系统服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开启-hyper-v-和-linux-子系统服务&#34;&gt;#&lt;/a&gt; 开启  &lt;code&gt;Hyper-V&lt;/code&gt;  和  &lt;code&gt;Linux&lt;/code&gt;  子系统服务&lt;/h2&gt;
+&lt;p&gt;要安装子系统，首先需要开启相应的  &lt;code&gt;Windows&lt;/code&gt;  系统的功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hyper-V 服务&lt;/li&gt;
+&lt;li&gt;Linux 子系统服务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在管理员权限的  &lt;code&gt;Powershell&lt;/code&gt;  中执行以下两条命令进行开启：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果以上指令无法成功，也可以在开始菜单搜索  &lt;code&gt;启用或关闭 Windows 功能&lt;/code&gt; ，并在其中勾选  &lt;code&gt;Hyper-V&lt;/code&gt;  和  &lt;code&gt;适用于 Windows 的 Linux 子系统&lt;/code&gt;  服务。之后根据提示重启电脑。&lt;/p&gt;
+&lt;h2 id=&#34;移动-wsl2-位置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移动-wsl2-位置&#34;&gt;#&lt;/a&gt; 移动  &lt;code&gt;WSL2&lt;/code&gt;  位置&lt;/h2&gt;
+&lt;p&gt;电脑重启后，运行安装好的子系统，我安装的是  &lt;code&gt;Ubuntu&lt;/code&gt;  子系统。&lt;/p&gt;
+&lt;p&gt;子系统默认安装在  &lt;code&gt;C&lt;/code&gt;  盘，这使得本就不宽裕的硬盘空间雪上加霜，因此这里对子系统的安装位置进行修改。这里参考的是一个问答中提供的答案&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;第一步，使用指令导出子系统文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Export Ubuntu&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;wsl --export Ubuntu D:&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;backup&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;ubuntu.tar&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中， &lt;code&gt;Ubuntu&lt;/code&gt;  是子系统的名称，可以通过  &lt;code&gt;wsl --list&lt;/code&gt;  指令进行查看。后续的路径则是子系统文件的导出位置，根据需要进行修改。&lt;/p&gt;
+&lt;p&gt;第二步，注销原来的子系统：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Unregister the same distribution to remove it from the C: drive:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;wsl --unregister Ubuntu&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这里仍然需要注意不要输错了子系统的名称。&lt;/p&gt;
+&lt;p&gt;第三步，导入第一步中导出的子系统文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Import Ubuntu&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;wsl --import Ubuntu D:&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;wsl&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt; D:&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;backup&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;ubuntu.tar&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在导入之后，子系统默认是使用的  &lt;code&gt;root&lt;/code&gt;  用户登录，如果需要修改，可以进入  &lt;code&gt;cd %userprofile%\AppData\Local\Microsoft\WindowsApps&lt;/code&gt;  路径，运行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ubuntu config --default-user &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;username&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;%userprofile%&lt;/code&gt;  表示的是用户的文件路径，一般是  &lt;code&gt;C:Users\&amp;lt;windows-log-name&amp;gt;&lt;/code&gt; 。如果找不到  &lt;code&gt;AppData&lt;/code&gt;  文件夹，看看是否启用了隐藏文件可见。&lt;/p&gt;
+&lt;p&gt;然后指令中的  &lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt;  是指在第一次运行子系统时输入的用户名。执行完成之后，子系统默认使用普通用户进行登录。&lt;/p&gt;
+&lt;h1 id=&#34;安装-nodejs-服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-nodejs-服务&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;Node.js&lt;/code&gt;  服务&lt;/h1&gt;
+&lt;p&gt;之后本想尝试在子系统下使用  &lt;code&gt;Node.js&lt;/code&gt;  来运行博客，但是后来发现子系统的文件  &lt;code&gt;I/O&lt;/code&gt;  速度相比原生系统还是太慢，这里还是选择在  &lt;code&gt;Windows&lt;/code&gt;  下使用  &lt;code&gt;Node.js&lt;/code&gt;  来运行博客的的后台服务。下文内容暂且保留以备不时之需。&lt;/p&gt;
+&lt;h2 id=&#34;安装-n-管理-nodejs-版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-n-管理-nodejs-版本&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;n&lt;/code&gt;  管理  &lt;code&gt;Node.js&lt;/code&gt;  版本&lt;/h2&gt;
+&lt;p&gt;在文章开头提到的子系统安装链接中，提到了使用  &lt;code&gt;n&lt;/code&gt;  来管理  &lt;code&gt;Node.js&lt;/code&gt;  的版本。由于直接使用官网&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34; id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;的命令安装无法成功获取脚本，因此仍然选择通过浏览器访问脚本文件，并在本地文件夹创建相应的脚本，在其中粘贴从浏览器复制的脚本内容。之后运行以下指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; n lts&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以上指令可能需要使用  &lt;code&gt;sudo&lt;/code&gt;  权限。
+运行之后使用  &lt;code&gt;node --version&lt;/code&gt;  和  &lt;code&gt;npm --version&lt;/code&gt;  确认是否安装成功。&lt;/p&gt;
+&lt;p&gt;安装完成后， &lt;code&gt;node&lt;/code&gt;  命令运行正常，但是  &lt;code&gt;npm&lt;/code&gt;  命令遇到了以下错误：&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;/usr/bin/env: ‘bash\r’: No such file or directory&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这里参考了&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wZWFrdS5jby9xdWVzdGlvbnMvMzIzOS1kZXNwdWVzLWRlLWluc3RhbGFyLW5wbS1lbi13c2wtdWJ1bnR1LTIwMDQsLWFwYXJlY2UtZWwtbWVuc2FqZS0lMjZxdW90Oy11c3ItYmluLWVudjotJTI2JTIzMzk7YmFzaCU1Q3IlMjYlMjMzOTs6LW5vLXN1Y2gtZmlsZS1vci1kaXJlY3RvcnklMjZxdW90Ow==&#34;&gt;此链接&lt;/span&gt;解决。按照其中被采纳的答案，创建  &lt;code&gt;/etc/wsl.conf&lt;/code&gt;  文件，并在其中添加以下内容：&lt;/p&gt;
+&lt;pre class=&#34;language-test&#34;&gt;&lt;code class=&#34;language-test&#34;&gt;[interop]
+appendWindowsPath = false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后在  &lt;code&gt;Powershell&lt;/code&gt;  中使用  &lt;code&gt;wsl --shutdown&lt;/code&gt;  关闭子系统，之后重新打开，运行  &lt;code&gt;bash n lts&lt;/code&gt;  安装命令。之后  &lt;code&gt;npm --version&lt;/code&gt;  命令能够正常显示。&lt;/p&gt;
+&lt;h2 id=&#34;安装-yarn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-yarn&#34;&gt;#&lt;/a&gt; 安装 yarn&lt;/h2&gt;
+&lt;p&gt;接下来，使用  &lt;code&gt;npm&lt;/code&gt;  安装  &lt;code&gt;yarn&lt;/code&gt;  进行包管理。相比于原生的  &lt;code&gt;npm&lt;/code&gt; ，该工具更加现代。使用如下命令安装  &lt;code&gt;yarn&lt;/code&gt; ：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; -g &lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;运行  &lt;code&gt;yarn --version&lt;/code&gt; ，成功输出版本信息则安装成功。&lt;/p&gt;
+&lt;h3 id=&#34;结合-yarn-安装-hexo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结合-yarn-安装-hexo&#34;&gt;#&lt;/a&gt; 结合 yarn 安装 Hexo&lt;/h3&gt;
+&lt;p&gt;之后，参考一篇博客的内容&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn3&#34; id=&#34;fnref3&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;，使用  &lt;code&gt;yarn&lt;/code&gt;  安装  &lt;code&gt;Hexo&lt;/code&gt;  服务。&lt;/p&gt;
+&lt;p&gt;使用如下指令安装  &lt;code&gt;hexo&lt;/code&gt; ：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; hexo-cli -g&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以上指令执行后，运行  &lt;code&gt;hexo -v&lt;/code&gt;  如果返回版本等信息，则说明安装成功。&lt;/p&gt;
+&lt;p&gt;在这里，我碰到了无法运行  &lt;code&gt;hexo&lt;/code&gt;  的问题，尝试过参考  &lt;code&gt;StackOverflow&lt;/code&gt;  中的答案&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn4&#34; id=&#34;fnref4&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;使用  &lt;code&gt;yarn global add hexo-cli&lt;/code&gt;  安装，仍然无法解决该问题。&lt;/p&gt;
+&lt;p&gt;后来发现，需要在环境变量添加  &lt;code&gt;yarn&lt;/code&gt;  的相关路径，具体参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbGFzc2ljLnlhcm5wa2cuY29tL2VuL2RvY3MvY2xpL2dsb2JhbA==&#34;&gt;此链接&lt;/span&gt;，使用如下指令添加：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;&lt;span class=&#34;token environment constant&#34;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;yarn&lt;/span&gt; global bin&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt;:&lt;span class=&#34;token environment constant&#34;&gt;$PATH&lt;/span&gt;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后可以成功运行  &lt;code&gt;hexo&lt;/code&gt;  命令。&lt;/p&gt;
+&lt;h2 id=&#34;卸载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#卸载&#34;&gt;#&lt;/a&gt; 卸载&lt;/h2&gt;
+&lt;p&gt;由于子系统的文件  &lt;code&gt;I/O&lt;/code&gt;  过于缓慢，因此最后还是放弃在子系统中运行  &lt;code&gt;Hexo&lt;/code&gt;  相关的服务。对于安装的上述软件，使用以下指令删除：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 删除 n 包管理器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; n uninstall&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 查找 yarn 和 node_modules 等残留文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 以下例子表示查找包含 yarn 名称的文件，过滤 /mnt/ 开头的路径，这部分是 Windows 系统中的文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;locate&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;*yarn*&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; -v &lt;span class=&#34;token string&#34;&gt;&#39;/mnt/&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;找到路径后，使用  &lt;code&gt;rm&lt;/code&gt;  删除相关的文件即可。&lt;/p&gt;
+&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;section class=&#34;footnotes&#34;&gt;
+&lt;ol class=&#34;footnotes-list&#34;&gt;
+&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdXBlcnVzZXIuY29tL3F1ZXN0aW9ucy8xNTUwNjIyL21vdmUtd3NsMi1maWxlLXN5c3RlbS10by1hbm90aGVyLWRyaXZl&#34;&gt;https://superuser.com/questions/1550622/move-wsl2-file-system-to-another-drive&lt;/span&gt; &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/tj/n&#34;&gt; &lt;code&gt;n&lt;/code&gt;  的官方  &lt;code&gt;GitHub&lt;/code&gt;  仓库&lt;/a&gt; &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn3&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudGFvamlzaHU4LmNvbS8yMDIxLzAxLzI4LyVFMyU4MCU5MEhleG8lRTMlODAlOTElRTIlOTElQTElRTUlQTYlODIlRTQlQkQlOTUlRTQlQkQlQkYlRTclOTQlQThIZXhvJUU1JTkyJThDR2l0SHViJUU2JTkwJUFEJUU1JUJCJUJBJUU0JUI4JUFBJUU0JUJBJUJBJUU1JThEJTlBJUU1JUFFJUEyLw==&#34;&gt;【Hexo】②如何使用 Hexo 和 GitHub 搭建个人博客&lt;/span&gt; &lt;a href=&#34;#fnref3&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn4&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvNDg0ODQyNjUvZmFpbGVkLXRvLWluc3RhbGwtaGV4by1jbGktb24tbWFj&#34;&gt;Failed to install hexo-cli on mac&lt;/span&gt; &lt;a href=&#34;#fnref4&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/oh-my-zsh-and-plugins/</guid>
+            <title>Oh My Zsh 及插件配置</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/oh-my-zsh-and-plugins/</link>
+            <category>Computer-Science</category>
+            <category>Configs</category>
+            <category>Oh-My-Zsh</category>
+            <pubDate>Sat, 08 Jan 2022 23:41:04 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;Oh My Zsh&lt;/code&gt;  是一款非常流行的  &lt;code&gt;zsh&lt;/code&gt;  配置管理工具，而  &lt;code&gt;zsh&lt;/code&gt;  又是一款能够很好地替代  &lt;code&gt;bash&lt;/code&gt;  的  &lt;code&gt;shell&lt;/code&gt; 。二者的结合能够为终端提供许多非常实用的功能。&lt;/p&gt;
+&lt;p&gt;我个人使用  &lt;code&gt;Windows&lt;/code&gt;  系统的  &lt;code&gt;WSL&lt;/code&gt; ，使用  &lt;code&gt;Ubuntu&lt;/code&gt;  环境。因此下文中的命令执行环境默认都是  &lt;code&gt;Ubuntu&lt;/code&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h1&gt;
+&lt;h2 id=&#34;安装-zsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-zsh&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;zsh&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;要安装  &lt;code&gt;Oh My Zsh&lt;/code&gt; ，首先必须要有一个  &lt;code&gt;zsh&lt;/code&gt;  环境， &lt;code&gt;zsh&lt;/code&gt;  是原始的  &lt;code&gt;bash&lt;/code&gt;  终端  &lt;code&gt;shell&lt;/code&gt;  的一个良好的替代品。安装  &lt;code&gt;zsh&lt;/code&gt;  非常简单：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;zsh&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装完成之后，使用下列指令将默认  &lt;code&gt;shell&lt;/code&gt;  改为  &lt;code&gt;zsh&lt;/code&gt; ：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;chsh -s /usr/bin/zsh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;命令中的路径可能需要根据实际情况进行修改，可以使用  &lt;code&gt;which zsh&lt;/code&gt;  命令查看  &lt;code&gt;zsh&lt;/code&gt;  的路径。&lt;/p&gt;
+&lt;h2 id=&#34;安装-oh-my-zsh&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-oh-my-zsh&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;Oh My Zsh&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;安装完  &lt;code&gt;zsh&lt;/code&gt;  之后，便可以开始  &lt;code&gt;Oh My Zsh&lt;/code&gt;  的安装了。更详细的内容，可以参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL29obXl6c2gvb2hteXpzaA==&#34; title=&#34;Oh My Zsh 官方 GitHub 链接&#34;&gt;官方链接&lt;/span&gt;，本文只做简要的介绍。&lt;/p&gt;
+&lt;table&gt;
+&lt;caption id=&#34;ohmyzsh&#34;&gt;Oh My Zsh 安装命令&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Method&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Command&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;curl&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;sh -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;wget&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;sh -c &amp;quot;$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;fetch&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;sh -c &amp;quot;$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;在这一步，虽然我使用了代理，也能够  &lt;code&gt;Ping&lt;/code&gt;  通链接域名  &lt;code&gt;raw.githubusercontent.com&lt;/code&gt; ，但是命令仍然不能执行成功。替代方法是在浏览器中直接访问这个链接，复制其中的文件内容，在本地创建  &lt;code&gt;install.sh&lt;/code&gt;  脚本，并运行  &lt;code&gt;sh install.sh&lt;/code&gt;  进行安装。&lt;/p&gt;
+&lt;p&gt;安装完成之后，应该能够看到终端命令行的  &lt;code&gt;prompt&lt;/code&gt;  会发生变化，这说明安装成功了。如果没有任何改变，可能需要重新启动终端。&lt;/p&gt;
+&lt;h1 id=&#34;主题和插件配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主题和插件配置&#34;&gt;#&lt;/a&gt; 主题和插件配置&lt;/h1&gt;
+&lt;p&gt;安装完成之后可以进一步配置主题来自定义终端的样式，或者安装其他的插件来增强终端的功能，提升终端的使用体验。&lt;/p&gt;
+&lt;h2 id=&#34;主题配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主题配置&#34;&gt;#&lt;/a&gt; 主题配置&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Oh My Zsh&lt;/code&gt;  的主题需要修改  &lt;code&gt;~/.zshrc&lt;/code&gt;  来进行配置，在其中找到  &lt;code&gt;ZSH_THEME&lt;/code&gt;  这一变量所在的位置，根据需要将后面的主题改为自己喜欢的主题的名称，比如最经典的  &lt;code&gt;robbyrussell&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;在  &lt;code&gt;~/.oh-my-zsh/themes&lt;/code&gt;  文件夹中有许多内置的主题文件，可以根据自己的喜好进行选择。如果还想要更多的主题，可以在网上进行搜索，然后放到这个文件夹下，并修改  &lt;code&gt;~/.zshrc&lt;/code&gt;  中的配置。我自己基于  &lt;code&gt;xiong-chiamiov-plus&lt;/code&gt;  主题自定义了一个主题。&lt;/p&gt;
+&lt;p&gt;修改完成后记得执行  &lt;code&gt;source ~/.zshrc&lt;/code&gt;  指令以使得修改得到应用。&lt;/p&gt;
+&lt;h2 id=&#34;插件配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#插件配置&#34;&gt;#&lt;/a&gt; 插件配置&lt;/h2&gt;
+&lt;p&gt;插件配置需要在  &lt;code&gt;~/.zshrc&lt;/code&gt;  中找到  &lt;code&gt;plugins&lt;/code&gt;  变量所在的位置，在括号中写入需要的插件的名称，注意插件名称之间使用空格进行分隔， &lt;code&gt;Oh My Zsh&lt;/code&gt;  默认启用了对  &lt;code&gt;git&lt;/code&gt;  插件。&lt;/p&gt;
+&lt;p&gt;在  &lt;code&gt;~/.oh-my-zsh/plugins&lt;/code&gt;  路径下能找到许多其他的插件，可以根据需要进行启用。这里推荐几个我自己使用的插件。&lt;/p&gt;
+&lt;h3 id=&#34;zsh-autosuggestions&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zsh-autosuggestions&#34;&gt;#&lt;/a&gt;  &lt;code&gt;zsh-autosuggestions&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;这一插件会根据过往输入的指令历史，依照你当前输入的指令内容推测你想要输入的完整指令，在你输入了部分指令之后，会在终端上给出提示，如果是想要的指令的话，可以使用方向键右键应用这条指令。快捷键可以根据自己的需要进行修改。&lt;/p&gt;
+&lt;p&gt;执行下述命令将插件下载到  &lt;code&gt;$ZSH_CUSTOM/plugins&lt;/code&gt;  文件夹下，默认位置在  &lt;code&gt;~/.oh-my-zsh/plugins&lt;/code&gt;  此处：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/zsh-users/zsh-autosuggestions &lt;span class=&#34;token variable&#34;&gt;$&amp;#123;ZSH_CUSTOM&lt;span class=&#34;token operator&#34;&gt;:-&lt;/span&gt;~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;custom&amp;#125;&lt;/span&gt;/plugins/zsh-autosuggestions&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后编辑  &lt;code&gt;~/.zshrc&lt;/code&gt;  中的  &lt;code&gt;plugins&lt;/code&gt;  变量：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# other plugins...&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    zsh-autosuggestions&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;使用  &lt;code&gt;source ~/.zshrc&lt;/code&gt;  应用修改。&lt;/p&gt;
+&lt;h3 id=&#34;zsh-syntax-highlighting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#zsh-syntax-highlighting&#34;&gt;#&lt;/a&gt;  &lt;code&gt;zsh-syntax-highlighting&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;这一插件能够高亮你在命令行中的输入，具体的示例可以参看官方  &lt;code&gt;GitHub&lt;/code&gt;  的内容。这里我个人觉得最实用的功能就是能够显示你当前输入的命令是否正确，如果输入的指令存在，那么会以绿色进行高亮，否则会以红色进行高亮，这样能够直观地判断指令是否输入正确。&lt;/p&gt;
+&lt;p&gt;和上一段的安装过程类似，执行下述命令下载插件：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/zsh-users/zsh-syntax-highlighting.git &lt;span class=&#34;token variable&#34;&gt;$&amp;#123;ZSH_CUSTOM&lt;span class=&#34;token operator&#34;&gt;:-&lt;/span&gt;~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;.oh-my-zsh&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;custom&amp;#125;&lt;/span&gt;/plugins/zsh-syntax-highlighting&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后修改  &lt;code&gt;~/.zshrc&lt;/code&gt;  中的  &lt;code&gt;plugins&lt;/code&gt;  变量：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;plugins&lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; zsh-syntax-highlighting&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;使用  &lt;code&gt;source ~/.zshrc&lt;/code&gt;  应用修改。&lt;/p&gt;
+&lt;h3 id=&#34;autojump&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#autojump&#34;&gt;#&lt;/a&gt;  &lt;code&gt;autojump&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;这个指令会根据过往的文件访问内容为每个文件夹确定一个权重，根据权重高低选择跳转的文件夹。例如我最近经常访问某个  &lt;code&gt;src&lt;/code&gt;  文件夹，那么我输入  &lt;code&gt;j src&lt;/code&gt;  指令之后，便会自动跳转到该文件夹。更多的功能可以查看该项目的 &lt;a href=&#34;https://github.com/wting/autojump&#34;&gt; &lt;code&gt;GitHub&lt;/code&gt;  主页&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;执行下列指令进行安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; autojump&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改  &lt;code&gt;~/.zshrc&lt;/code&gt;  的  &lt;code&gt;plugins&lt;/code&gt;  变量：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;plugins&lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; autojump&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;使用  &lt;code&gt;source ~/.zshrc&lt;/code&gt;  应用修改。&lt;/p&gt;
+&lt;h3 id=&#34;material-colors&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#material-colors&#34;&gt;#&lt;/a&gt;  &lt;code&gt;material-colors&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;根据文件类型用不同颜色显示其名称。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; clone https://github.com/zpm-zsh/material-colors ~/.oh-my-zsh/custom/plugins/material-colors&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改  &lt;code&gt;~/.zshrc&lt;/code&gt;  的  &lt;code&gt;plugins&lt;/code&gt;  变量：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;plugins&lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;.&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; material-colors&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;内置插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内置插件&#34;&gt;#&lt;/a&gt; 内置插件&lt;/h3&gt;
+&lt;p&gt;出了第三方插件之外， &lt;code&gt;Oh My Zsh&lt;/code&gt;  内置了许多插件，出了最常用的  &lt;code&gt;git&lt;/code&gt;  插件之外，还有一些插件也值得推荐。&lt;/p&gt;
+&lt;h4 id=&#34;extract&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#extract&#34;&gt;#&lt;/a&gt;  &lt;code&gt;extract&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;用于解压文件，不用再去纠结  &lt;code&gt;tar&lt;/code&gt;  一类命令的具体参数细节。&lt;/p&gt;
+&lt;h4 id=&#34;colored-man-pages&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#colored-man-pages&#34;&gt;#&lt;/a&gt;  &lt;code&gt;colored-man-pages&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;使用  &lt;code&gt;man&lt;/code&gt;  命令查看其他指令的说明文档时，对内容进行高亮，使得内容更加清晰。&lt;/p&gt;
+&lt;h1 id=&#34;其他选项设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他选项设置&#34;&gt;#&lt;/a&gt; 其他选项设置&lt;/h1&gt;
+&lt;p&gt;在某些比较到的工程项目文件夹之下， &lt;code&gt;git&lt;/code&gt;  插件的  &lt;code&gt;prompt&lt;/code&gt;  功能会严重影响  &lt;code&gt;shell&lt;/code&gt;  的响应速度。尽管这一功能能够帮助我们查看  &lt;code&gt;git&lt;/code&gt;  项目中是否有文件被修改，但是严重影响了终端的响应速度，而实际中我们经常会使用  &lt;code&gt;git status&lt;/code&gt;  确认文件的修改情况，因此权衡之后，还是决定关闭这个功能以提升日常的使用体验。&lt;/p&gt;
+&lt;p&gt;这里去除  &lt;code&gt;~/.zshrc&lt;/code&gt;  中的以下内容的注释：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token assign-left variable&#34;&gt;DISABLE_UNTRACKED_FILES_DIRTY&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;true&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后使用&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config --global --add oh-my-zsh.hide-dirty &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;停用追踪文件修改的功能以提升  &lt;code&gt;shell&lt;/code&gt;  的响应速度。&lt;/p&gt;
+&lt;p&gt;执行上述操作之后，实测  &lt;code&gt;shell&lt;/code&gt;  的响应速度有了明显的提升。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/clion-wsl2-cuda-configs/</guid>
+            <title>通过 CLion 在 WSL2 的 CUDA 环境下使用 libtorch</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/clion-wsl2-cuda-configs/</link>
+            <category>Computer-Science</category>
+            <category>Configs</category>
+            <category>CUDA</category>
+            <category>PyTorch</category>
+            <category>WSL2</category>
+            <category>CLion</category>
+            <pubDate>Fri, 08 Oct 2021 23:32:30 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h1&gt;
+&lt;p&gt;本文记录使用  &lt;code&gt;CLion&lt;/code&gt;  的  &lt;code&gt;IDE&lt;/code&gt;  环境，使用  &lt;code&gt;WSL2&lt;/code&gt;  环境下的  &lt;code&gt;CUDA&lt;/code&gt;  来调用  &lt;code&gt;PyTorch&lt;/code&gt;  的  &lt;code&gt;libtorch&lt;/code&gt;  库内容。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;libtorch&lt;/code&gt;  是  &lt;code&gt;PyTorch&lt;/code&gt;  框架提供的  &lt;code&gt;C++&lt;/code&gt;  接口，因为最近的课题对性能有比较高的要求，并且有自定义算子的需求，所以需要用到相关的代码。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WSL2&lt;/code&gt;  下的  &lt;code&gt;CUDA&lt;/code&gt;  环境配置可以参考&lt;a href=&#34;/Computer-Science/Configs/wsl2-cuda-configs/&#34; title=&#34;这篇文章&#34;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;h2 id=&#34;下载-libtorch&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载-libtorch&#34;&gt;#&lt;/a&gt; 下载  &lt;code&gt;libtorch&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;从  &lt;code&gt;PyTorch&lt;/code&gt;  的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9weXRvcmNoLm9yZy8=&#34;&gt;官方网站&lt;/span&gt;下载自己所需版本的  &lt;code&gt;libtorch&lt;/code&gt;  。注意和自己的  &lt;code&gt;CUDA&lt;/code&gt;  版本也要对应。&lt;/p&gt;
+&lt;h2 id=&#34;clion-配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#clion-配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;CLion&lt;/code&gt;  配置&lt;/h2&gt;
+&lt;p&gt;打开  &lt;code&gt;CLion&lt;/code&gt;  新建一个  &lt;code&gt;CUDA executable&lt;/code&gt;  工程。然后修改  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  和  &lt;code&gt;CMake&lt;/code&gt;  的相关配置。&lt;/p&gt;
+&lt;h3 id=&#34;wsl2-环境配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#wsl2-环境配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;WSL2&lt;/code&gt;  环境配置&lt;/h3&gt;
+&lt;p&gt;参考这篇&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNzI1MjI1OTQ=&#34;&gt;知乎文章&lt;/span&gt;中的&lt;strong&gt;第三步 - 配置 Clion 内的 Toolchains&lt;/strong&gt; 这一部分的内容。&lt;/p&gt;
+&lt;h3 id=&#34;cmake-配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cmake-配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;CMake&lt;/code&gt;  配置&lt;/h3&gt;
+&lt;p&gt;按照  &lt;code&gt;File&lt;/code&gt; -&amp;gt; &lt;code&gt;Settings&lt;/code&gt; -&amp;gt; &lt;code&gt;Build,Execution,Development&lt;/code&gt; -&amp;gt; &lt;code&gt;CMake&lt;/code&gt;  的路径，在其中的  &lt;code&gt;CMake options&lt;/code&gt;  选项中添加  &lt;code&gt;-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc&lt;/code&gt;  的内容。如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/clion-wsl2-cuda-configs-cmake-options.jpg&#34; alt=&#34;CMake options&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修改-cmakeliststxt&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改-cmakeliststxt&#34;&gt;#&lt;/a&gt; 修改  &lt;code&gt;CMakeLists.txt&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;首先将下载好的  &lt;code&gt;libtorch&lt;/code&gt;  文件解压，这里我解压到了本文件夹下的  &lt;code&gt;libtorch&lt;/code&gt;  文件夹中。在  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  文件中设置  &lt;code&gt;CMAKE_PREFIX_PATH&lt;/code&gt;  变量，添加  &lt;code&gt;libtorch&lt;/code&gt;  的路径。添加  &lt;code&gt;find_package(Torch REQUIRED)&lt;/code&gt;  语句，以及  &lt;code&gt;target_link_libraries(ProjectName &amp;quot;$&amp;#123;TORCH_LIBRARIES&amp;#125;&amp;quot;)&lt;/code&gt; ，这两行是最关键的内容。&lt;/p&gt;
+&lt;figure class=&#34;highlight cmake&#34;&gt;&lt;figcaption data-lang=&#34;CMake&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;project&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ProjectName CXX CUDA&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;CMAKE_PREFIX_PATH&lt;/span&gt; libtorch&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;find_package&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Torch REQUIRED&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;target_link_libraries&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ProjectName &lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;$&amp;#123;&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;TORCH_LIBRARIES&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上方的代码中省去了  &lt;code&gt;CLion&lt;/code&gt;  中默认提供的内容，以便让内容更清晰。&lt;/p&gt;
+&lt;h3 id=&#34;代码测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#代码测试&#34;&gt;#&lt;/a&gt; 代码测试&lt;/h3&gt;
+&lt;p&gt;在工程中添加一个  &lt;code&gt;main.cpp&lt;/code&gt;  文件，注意在  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  也要对应修改  &lt;code&gt;add_executable(ProjectName main.cpp)&lt;/code&gt;  这一行的内容。&lt;/p&gt;
+&lt;p&gt;在  &lt;code&gt;main.cpp&lt;/code&gt;  中添加如下的测试代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;torch/torch.h&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    torch&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;Tensor tensor &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; torch&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;rand&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; tensor &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; tensor&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果编译并运行成功，那么配置完成。&lt;/p&gt;
+&lt;h1 id=&#34;可能的错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可能的错误&#34;&gt;#&lt;/a&gt; 可能的错误&lt;/h1&gt;
+&lt;p&gt;如果碰到  &lt;code&gt;PyTorch requires cuDNN 7 and above.&lt;/code&gt;  这一问题，可以参考这个 &lt;a href=&#34;https://github.com/pytorch/pytorch/issues/40965&#34;&gt; &lt;code&gt;GitHub&lt;/code&gt;  链接&lt;/a&gt;。问题的原因在于无法识别系统中的  &lt;code&gt;cuDNN&lt;/code&gt;  版本。我自己碰到这个问题的原因是没有把  &lt;code&gt;cuDNN&lt;/code&gt;  中的  &lt;code&gt;cudnn_version.h&lt;/code&gt;  这一头文件复制到对应位置，在复制之后问题解决。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/wsl2-cuda-configs/</guid>
+            <title>WSL2 下的 CUDA 配置</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/wsl2-cuda-configs/</link>
+            <category>Computer-Science</category>
+            <category>Configs</category>
+            <category>CUDA</category>
+            <category>WSL</category>
+            <pubDate>Fri, 08 Oct 2021 22:56:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h1&gt;
+&lt;p&gt;本文记录  &lt;code&gt;Windows&lt;/code&gt;  环境下  &lt;code&gt;WSL2&lt;/code&gt;  系统中配置  &lt;code&gt;CUDA&lt;/code&gt;  环境的过程。配置过程主要参考这篇&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNTAzOTkyMjk=&#34;&gt;知乎文章&lt;/span&gt;以及&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm52aWRpYS5jb20vY3VkYS93c2wtdXNlci1ndWlkZS9pbmRleC5odG1s&#34;&gt;官方文档&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;本文内容中省去在  &lt;code&gt;Windows&lt;/code&gt;  下安装  &lt;code&gt;WSL2&lt;/code&gt;  的过程，这里默认已经安装该环境。如果没有安装  &lt;code&gt;WSL2&lt;/code&gt; ，可以参考官方文档中提供的说明。&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;h2 id=&#34;安装驱动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装驱动&#34;&gt;#&lt;/a&gt; 安装驱动&lt;/h2&gt;
+&lt;p&gt;参考官方文档中的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm52aWRpYS5jb20vY3VkYS93c2wtdXNlci1ndWlkZS9pbmRleC5odG1sIzp+OnRleHQ9UmVsZWFzZSUyMFByZXZpZXclMjBDaGFubmVsLi0sMi4zLiVDMiVBMEluc3RhbGxpbmclMjBOVklESUElMjBXaW5kb3dzJTIwRHJpdmVycyUyMGZvciUyMENVREElMkMlMjBEaXJlY3RYJTJDJTIwYW5kJTIwRGlyZWN0TUwlMjBTdXBwb3J0LC1Eb3dubG9hZCUyMHRoZSUyME5WSURJQQ==&#34;&gt;2.3 小节&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;下载好驱动之后直接安装，安装选项均为默认值。&lt;/p&gt;
+&lt;h2 id=&#34;安装-cuda&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-cuda&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;CUDA&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;参考官方文档中的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm52aWRpYS5jb20vY3VkYS93c2wtdXNlci1ndWlkZS9pbmRleC5odG1sI2NoMDNhLXNldHRpbmctdXAtY3VkYQ==&#34;&gt;2.6 小节&lt;/span&gt;。文档中提供了几种可选的方法，任选一种即可，如果全部执行一遍反而可能会出问题。我自己选择的是  &lt;code&gt;Installation of CUDA Toolkit using WSL-Ubuntu Package&lt;/code&gt;  这一节中的方法。依照后续的指令来看， &lt;code&gt;WSL2&lt;/code&gt;  需要安装  &lt;code&gt;Ubuntu-20.04&lt;/code&gt;  的版本。&lt;/p&gt;
+&lt;p&gt;首先依次执行以下指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;wget&lt;/span&gt; https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;wget&lt;/span&gt; https://developer.download.nvidia.com/compute/cuda/11.4.0/local_installers/cuda-repo-wsl-ubuntu-11-4-local_11.4.0-1_amd64.deb&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; dpkg -i cuda-repo-wsl-ubuntu-11-4-local_11.4.0-1_amd64.deb&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; apt-key &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; /var/cuda-repo-wsl-ubuntu-11-4-local/7fa2af80.pub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; update&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;apt-get&lt;/span&gt; -y &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; cuda&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上述指令中安装的  &lt;code&gt;CUDA&lt;/code&gt;  版本是  &lt;code&gt;11.4&lt;/code&gt;  的，虽然我自己的  &lt;code&gt;Windows&lt;/code&gt;  中安装的  &lt;code&gt;CUDA&lt;/code&gt;  版本是  &lt;code&gt;10.1&lt;/code&gt; ，但是好像不匹配也并无大碍。安装过程中可以将  &lt;code&gt;apt&lt;/code&gt;  的源更换为阿里提供的镜像，具体更改方法可以参考此&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xNTM4MzA0&#34;&gt;链接&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;安装完成后，修改  &lt;code&gt;WSL2&lt;/code&gt;  系统的环境变量。通常是在  &lt;code&gt;~/.bashrc&lt;/code&gt;  文件中添加如下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;CUDA_HOME&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/usr/local/cuda&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;&lt;span class=&#34;token environment constant&#34;&gt;PATH&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token environment constant&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$CUDA_HOME&lt;/span&gt;/bin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/usr/local/cuda-11.4/lib64&lt;span class=&#34;token variable&#34;&gt;$&amp;#123;LD_LIBRARY_PATH&lt;span class=&#34;token operator&#34;&gt;:+&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;$&amp;#123;LD_LIBRARY_PATH&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;我自己因为安装了  &lt;code&gt;zsh&lt;/code&gt;  中断，所以我在  &lt;code&gt;~/.zshrc&lt;/code&gt;  文件中添加上述内容。注意其中的  &lt;code&gt;CUDA&lt;/code&gt;  版本号和自己的版本对应。&lt;/p&gt;
+&lt;p&gt;上述修改完成后，在终端输入如下指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nvcc --version&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果得到如下类似的输出说明安装成功了：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/wsl2-cuda-configs-nvcc-version.jpg&#34; alt=&#34;nvcc version&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-cudnn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-cudnn&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;cuDNN&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;com/rdp/cudnn-download&#34;&gt;官网&lt;/a&gt;下载和  &lt;code&gt;CUDA&lt;/code&gt;  对应的  &lt;code&gt;cuDNN&lt;/code&gt;  版本。可能需要预先注册账号。下载时选择  &lt;code&gt;cuDNN Library for Linux (x86)&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;下载完成后使用如下指令解压，并将文件移动到对应的文件夹：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; -zxvf cudnn-11.4-linux-x64-v8.2.4.15.tgz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; -P cuda/lib64/libcudnn* /usr/local/cuda-11.4/lib64/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt;  cuda/include/cudnn* /usr/local/cuda-11.4/include/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后为所有文件设置权限：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; a+r /usr/local/cuda-11.0/include/cudnn*&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; a+r /usr/local/cuda-11.0/lib64/libcudnn*&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;验证安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#验证安装&#34;&gt;#&lt;/a&gt; 验证安装&lt;/h2&gt;
+&lt;p&gt;执行以下指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /usr/local/cuda/samples/4_Finance/BlackScholes&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;make&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./BlackScholes&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果得到  &lt;code&gt;Test passed&lt;/code&gt;  的输出说明安装成功：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/wsl2-cuda-configs-check-cuda-installation.jpg&#34; alt=&#34;check cuda installation&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
