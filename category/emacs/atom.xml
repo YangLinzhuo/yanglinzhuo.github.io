@@ -4,37 +4,37 @@
     <title>林•初夏 • Posts by &#34;emacs&#34; category</title>
     <link href="https://linn-ylz.com" />
     <updated>2022-01-17T09:34:55.000Z</updated>
+    <category term="Cpp" />
     <category term="Computer-Science" />
     <category term="Configs" />
     <category term="CUDA" />
     <category term="PyTorch" />
     <category term="TiddlyWiki" />
     <category term="Fishing" />
-    <category term="Cpp" />
-    <category term="Emacs" />
-    <category term="Hexo" />
-    <category term="Valine" />
-    <category term="Waline" />
     <category term="AncientBook" />
     <category term="Book" />
     <category term="Essay" />
     <category term="Game" />
     <category term="Music" />
     <category term="Movie" />
+    <category term="Hexo" />
+    <category term="Valine" />
+    <category term="Waline" />
+    <category term="Emacs" />
     <category term="Algorithm" />
     <category term="Binary-Search" />
     <category term="Coding-Interviews" />
+    <category term="Oh-My-Zsh" />
     <category term="WSL2" />
     <category term="CLion" />
-    <category term="Oh-My-Zsh" />
     <category term="WSL" />
     <category term="Programming-Pearls" />
-    <category term="History" />
-    <category term="ChineseHistory" />
-    <category term="Table" />
     <category term="Python" />
     <category term="YAML" />
     <category term="dataclass" />
+    <category term="History" />
+    <category term="ChineseHistory" />
+    <category term="Table" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-4/</id>
         <title>Emacs 学习（四）Emacs 详细配置</title>

@@ -1,4 +1,4 @@
-var CONFIG = {"version":"0.2.5","hostname":"https://linn-ylz.com","root":"/","statics":"/","favicon":{"normal":"images/favicon.ico","hidden":"images/failure.ico"},"darkmode":false,"auto_scroll":true,"js":{"valine":"gh/amehime/MiniValine@4.2.2-beta10/dist/MiniValine.min.js","chart":"npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js","copy_tex":"npm/katex@0.12.0/dist/contrib/copy-tex.min.js","fancybox":"combine/npm/jquery@3.5.1/dist/jquery.min.js,npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js,npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"},"css":{"valine":"css/comment.css","katex":"npm/katex@0.12.0/dist/katex.min.css","mermaid":"css/mermaid.css","fancybox":"combine/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"},"loader":{"start":true,"switch":false},"search":{"path":"search.json","format":"html","limit":10000,"content":true,"unescape":true,"preload":true,"trigger":"auto","top_n_per_article":10,"article_per_page":5},"valine":{"appId":"cLSGCqq1yBAtEPCV1TqSuNEG-MdYXbMMI","appKey":"zHDQdUKiWIFn4NpI3jiM3m7i","placeholder":"ヽ(○´∀`)ﾉ♪","avatar":"mp","pageSize":10,"lang":"zh-CN","visitor":true,"NoRecordIP":false,"serverURLs":"https://clsgcqq1.api.lncldglobal.com","powerMode":true,"tagMeta":{"visitor":"新朋友","master":"主人","friend":"小伙伴","investor":"金主粑粑"},"tagColor":{"master":"var(--color-orange)","friend":"var(--color-aqua)","investor":"var(--color-pink)"},"tagMember":{"master":["cb979533cfc585a0c1a4e0f1b366d84f"],"friend":["deea5a8d259d17182a53be1772e4c182"],"investor":null}},"quicklink":{"timeout":3000,"priority":true},"audio":[{"title":"列表1","list":["https://music.163.com/#/playlist?id=2943811283","https://music.163.com/#/playlist?id=2297706586"]},{"title":"列表2","list":["https://music.163.com/#/playlist?id=2031842656"]}],"fireworks":["rgba(255,182,185,.9)","rgba(250,227,217,.9)","rgba(187,222,214,.9)","rgba(138,198,209,.9)"]};const getRndInteger = function (min, max) {
+var CONFIG = {"version":"0.2.5","hostname":"https://linn-ylz.com","root":"/","statics":"/","favicon":{"normal":"images/favicon.ico","hidden":"images/failure.ico"},"darkmode":false,"auto_scroll":true,"js":{"waline":"npm/@waline/client/dist/Waline.min.js","chart":"npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js","copy_tex":"npm/katex@0.12.0/dist/contrib/copy-tex.min.js","fancybox":"combine/npm/jquery@3.5.1/dist/jquery.min.js,npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js,npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"},"css":{"waline":"css/comment.css","katex":"npm/katex@0.12.0/dist/katex.min.css","mermaid":"css/mermaid.css","fancybox":"combine/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"},"loader":{"start":true,"switch":false},"search":{"path":"search.json","format":"html","limit":10000,"content":true,"unescape":true,"preload":true,"trigger":"auto","top_n_per_article":10,"article_per_page":5},"waline":{"serverURL":"https://comments.linn-ylz.com","visitor":true,"lang":"zh-CN","login":"enable","wordLimit":0,"pageSize":10,"highlight":true,"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"placeholder":"( •̀ ω •́ )","copyright":true,"pageview":true,"emoji":["https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/weibo"]},"quicklink":{"timeout":3000,"priority":true},"audio":[{"title":"列表1","list":["https://music.163.com/#/playlist?id=2943811283","https://music.163.com/#/playlist?id=2297706586"]},{"title":"列表2","list":["https://music.163.com/#/playlist?id=2031842656"]}],"fireworks":["rgba(255,182,185,.9)","rgba(250,227,217,.9)","rgba(187,222,214,.9)","rgba(138,198,209,.9)"]};const getRndInteger = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -2048,13 +2048,13 @@ const loadComments = function () {
   }
 
   if (!window.IntersectionObserver) {
-    // vendorCss('waline');
-    vendorCss('valine');
+    vendorCss('waline');
+    // vendorCss('valine');
   } else {
     var io = new IntersectionObserver(function(entries, observer) {
       var entry = entries[0];
-      // vendorCss('waline');
-      vendorCss('valine');
+      vendorCss('waline');
+      // vendorCss('valine');
       if (entry.isIntersecting || entry.intersectionRatio > 0) {
         transition($('#comments'), 'bounceUpIn');
         observer.disconnect();
@@ -2736,44 +2736,43 @@ const siteRefresh = function (reload) {
   vendorCss('mermaid');
   vendorJs('chart');
 
-  if(CONFIG.valine.appId && CONFIG.valine.appKey) {
-    vendorJs('valine', function() {
-      var options = Object.assign({}, CONFIG.valine);
-      options = Object.assign(options, LOCAL.valine||{});
-      options.el = '#comments';
-      options.pathname = LOCAL.path;
-      options.pjax = pjax;
-      options.lazyload = lazyload;
-
-      new MiniValine(options);
-
-      setTimeout(function(){
-        positionInit(1);
-        postFancybox('.v');
-      }, 1000);
-    }, window.MiniValine);
-  }
-
-
-  // if(CONFIG.waline.serverURL) {
-  //   vendorJs('waline', function() {
-  //     var options = Object.assign({}, CONFIG.waline);
-  //     options = Object.assign(options, LOCAL.waline||{});
+  // if(CONFIG.valine.appId && CONFIG.valine.appKey) {
+  //   vendorJs('valine', function() {
+  //     var options = Object.assign({}, CONFIG.valine);
+  //     options = Object.assign(options, LOCAL.valine||{});
   //     options.el = '#comments';
   //     options.pathname = LOCAL.path;
   //     options.pjax = pjax;
   //     options.lazyload = lazyload;
-  //     options.pageview = '.leancloud-visitors-count'
-  //     // options.pageview = true;
 
-  //     new Waline(options);
+  //     new MiniValine(options);
 
   //     setTimeout(function(){
   //       positionInit(1);
-  //       postFancybox('.waline-container');
+  //       postFancybox('.v');
   //     }, 1000);
-  //   }, window.Waline);
+  //   }, window.MiniValine);
   // }
+
+  if(CONFIG.waline.serverURL) {
+    vendorJs('waline', function() {
+      var options = Object.assign({}, CONFIG.waline);
+      options = Object.assign(options, LOCAL.waline||{});
+      options.el = '#comments';
+      options.pathname = LOCAL.path;
+      options.pjax = pjax;
+      options.lazyload = lazyload;
+      options.pageview = '.leancloud-visitors-count'
+      // options.pageview = true;
+
+      new Waline(options);
+
+      setTimeout(function(){
+        positionInit(1);
+        postFancybox('.waline-container');
+      }, 1000);
+    }, window.Waline);
+  }
 
   if(!reload) {
     $.each('script[data-pjax]', pjaxScript);
@@ -2921,27 +2920,9 @@ const getRecentComments = function () {
   }
 }
 
-const wakeUpLeanCloud = function () {
-  console.log("Try to wakeup Leancloud");
-  const url = 'https://linn-blog.avosapps.us';  // 注意不要添加 stg 前缀
-  fetch(url)
-  .then(function(response) {
-      const html = response.status;
-      var result = url + " Status：" + html;
-      console.log(result);
-  });
-}
-
 window.addEventListener('DOMContentLoaded', siteInit);
 
-window.addEventListener('DOMContentLoaded', wakeUpLeanCloud);
-
-window.addEventListener('hashchange', wakeUpLeanCloud);
-
-// window.addEventListener('popstate', wakeUpLeanCloud);
-// window.addEventListener('pageshow', wakeUpLeanCloud);
-
-// window.addEventListener('DOMContentLoaded', getPageView);
+window.addEventListener('DOMContentLoaded', getPageView);
 
 // window.addEventListener('popstate', getPageView);
 
@@ -2949,7 +2930,7 @@ window.addEventListener('hashchange', wakeUpLeanCloud);
 
 // window.addEventListener('pageshow', getPageView);
 
-// window.addEventListener('DOMContentLoaded', getRecentComments);
+window.addEventListener('DOMContentLoaded', getRecentComments);
 
 console.log('%c Theme.Shoka v' + CONFIG.version + ' %c https://shoka.lostyu.me/ ', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;')
 
