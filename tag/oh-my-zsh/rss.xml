@@ -7,13 +7,14 @@
         <language>zh-CN</language>
         <pubDate>Sat, 08 Jan 2022 23:41:04 +0800</pubDate>
         <lastBuildDate>Sat, 08 Jan 2022 23:41:04 +0800</lastBuildDate>
-        <category>Cpp</category>
         <category>Computer-Science</category>
         <category>Configs</category>
         <category>CUDA</category>
         <category>PyTorch</category>
+        <category>Cpp</category>
         <category>TiddlyWiki</category>
         <category>Fishing</category>
+        <category>Emacs</category>
         <category>AncientBook</category>
         <category>Book</category>
         <category>Essay</category>
@@ -23,21 +24,20 @@
         <category>Hexo</category>
         <category>Valine</category>
         <category>Waline</category>
-        <category>Emacs</category>
         <category>Algorithm</category>
         <category>Binary-Search</category>
         <category>Coding-Interviews</category>
-        <category>Oh-My-Zsh</category>
+        <category>Programming-Pearls</category>
         <category>WSL2</category>
         <category>CLion</category>
+        <category>Oh-My-Zsh</category>
         <category>WSL</category>
-        <category>Programming-Pearls</category>
-        <category>Python</category>
-        <category>YAML</category>
-        <category>dataclass</category>
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/oh-my-zsh-and-plugins/</guid>
             <title>Oh My Zsh 及插件配置</title>
