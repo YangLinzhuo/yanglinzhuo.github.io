@@ -17,24 +17,24 @@
     <category term="Waline" />
     <category term="AncientBook" />
     <category term="Book" />
-    <category term="Movie" />
     <category term="Essay" />
     <category term="Game" />
     <category term="Music" />
+    <category term="Movie" />
     <category term="Algorithm" />
     <category term="Binary-Search" />
-    <category term="History" />
-    <category term="ChineseHistory" />
-    <category term="Table" />
     <category term="WSL2" />
     <category term="CLion" />
     <category term="Oh-My-Zsh" />
     <category term="WSL" />
-    <category term="Coding-Interviews" />
     <category term="Programming-Pearls" />
     <category term="Python" />
     <category term="YAML" />
     <category term="dataclass" />
+    <category term="Coding-Interviews" />
+    <category term="History" />
+    <category term="ChineseHistory" />
+    <category term="Table" />
     <entry>
         <id>https://linn-ylz.com/Essay/chinese-ancient-book/</id>
         <title>中国古籍电子化尝试</title>

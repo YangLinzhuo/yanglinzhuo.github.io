@@ -20,24 +20,24 @@
         <category>Waline</category>
         <category>AncientBook</category>
         <category>Book</category>
-        <category>Movie</category>
         <category>Essay</category>
         <category>Game</category>
         <category>Music</category>
+        <category>Movie</category>
         <category>Algorithm</category>
         <category>Binary-Search</category>
-        <category>History</category>
-        <category>ChineseHistory</category>
-        <category>Table</category>
         <category>WSL2</category>
         <category>CLion</category>
         <category>Oh-My-Zsh</category>
         <category>WSL</category>
-        <category>Coding-Interviews</category>
         <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
         <category>dataclass</category>
+        <category>Coding-Interviews</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-4/</guid>
             <title>Emacs 学习（四）Emacs 详细配置</title>

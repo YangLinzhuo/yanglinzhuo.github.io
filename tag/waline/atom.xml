@@ -17,30 +17,34 @@
     <category term="Waline" />
     <category term="AncientBook" />
     <category term="Book" />
-    <category term="Movie" />
     <category term="Essay" />
     <category term="Game" />
     <category term="Music" />
+    <category term="Movie" />
     <category term="Algorithm" />
     <category term="Binary-Search" />
-    <category term="History" />
-    <category term="ChineseHistory" />
-    <category term="Table" />
     <category term="WSL2" />
     <category term="CLion" />
     <category term="Oh-My-Zsh" />
     <category term="WSL" />
-    <category term="Coding-Interviews" />
     <category term="Programming-Pearls" />
     <category term="Python" />
     <category term="YAML" />
     <category term="dataclass" />
+    <category term="Coding-Interviews" />
+    <category term="History" />
+    <category term="ChineseHistory" />
+    <category term="Table" />
     <entry>
         <id>https://linn-ylz.com/Hexo/transfer-waline/</id>
         <title>从 Valine 迁移到 Waline</title>
         <link rel="alternate" href="https://linn-ylz.com/Hexo/transfer-waline/"/>
-        <content type="html">&lt;div class=&#34;note warning&#34;&gt;
-&lt;p&gt;想来想去，很多问题还是没有解决，主要还是  &lt;code&gt;Waline&lt;/code&gt;  与博客主题不完全兼容，加上自己对前端也不是很了解，最后还是改了回去。真是太折腾了。&lt;s&gt;流石程序员。&lt;/s&gt;&lt;/p&gt;
+        <content type="html">&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;2022-12-02 更新
+根据评论区小伙伴 @&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXJlZGV2aS5mdW4v&#34;&gt;MareDevi&lt;/span&gt; 的介绍，成功解决了文章浏览量显示的问题，撒花！🌸&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;&lt;s&gt;想来想去，很多问题还是没有解决，主要还是  &lt;code&gt;Waline&lt;/code&gt;  与博客主题不完全兼容，加上自己对前端也不是很了解，最后还是改了回去。真是太折腾了。流石程序员。&lt;/s&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;由于  &lt;code&gt;Valine&lt;/code&gt;  评论系统的通知问题以及其他原因，考虑更换  &lt;code&gt;Waline&lt;/code&gt;  作为新的评论系统，但是原来的  &lt;code&gt;Shoka&lt;/code&gt;  主题使用的是作者修改后的  &lt;code&gt;MiniValine&lt;/code&gt;  系统，在修改上碰到了很大的麻烦，&lt;s&gt;最后只能忍痛割爱更换了现在的  &lt;code&gt;butterfly&lt;/code&gt;  主题。这次更换也是对博客进行了一个大刀阔斧的修改，但是也摆脱了  &lt;code&gt;Valine&lt;/code&gt;  系统这个累赘。原来经常有评论无法及时提醒，而我自己有时候又不会经常上网站查看，因此有的消息过了很久才能发现。最后还是下定决心进行迁移。&lt;/s&gt;&lt;/p&gt;
