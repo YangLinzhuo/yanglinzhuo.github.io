@@ -67,3 +67,7 @@
 .v textarea {
   font-size: 0.85em !important;
 }
+.v[data-class=v] .vcard .vcontent .vemoji {
+  width: 2.5em !important /*表情包大小修改*/;
+  margin: 0.25em !important;
+}

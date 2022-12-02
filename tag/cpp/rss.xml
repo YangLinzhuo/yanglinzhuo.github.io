@@ -7,34 +7,34 @@
         <language>zh-CN</language>
         <pubDate>Fri, 16 Sep 2022 20:28:29 +0800</pubDate>
         <lastBuildDate>Fri, 16 Sep 2022 20:28:29 +0800</lastBuildDate>
+        <category>Cpp</category>
         <category>Computer-Science</category>
         <category>Configs</category>
         <category>CUDA</category>
         <category>PyTorch</category>
-        <category>Cpp</category>
         <category>TiddlyWiki</category>
         <category>Fishing</category>
         <category>Emacs</category>
-        <category>AncientBook</category>
-        <category>Book</category>
-        <category>Essay</category>
-        <category>Game</category>
-        <category>Music</category>
-        <category>Movie</category>
         <category>Hexo</category>
         <category>Valine</category>
         <category>Waline</category>
+        <category>AncientBook</category>
+        <category>Book</category>
+        <category>Movie</category>
+        <category>Essay</category>
+        <category>Game</category>
+        <category>Music</category>
         <category>Algorithm</category>
         <category>Binary-Search</category>
-        <category>Coding-Interviews</category>
-        <category>Programming-Pearls</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
         <category>WSL2</category>
         <category>CLion</category>
         <category>Oh-My-Zsh</category>
         <category>WSL</category>
-        <category>History</category>
-        <category>ChineseHistory</category>
-        <category>Table</category>
+        <category>Coding-Interviews</category>
+        <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
         <category>dataclass</category>
@@ -42,8 +42,8 @@
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Algorithm/abount-binary-search/</guid>
             <title>二分搜索探究</title>
             <link>https://linn-ylz.com/Computer-Science/Algorithm/abount-binary-search/</link>
-            <category>Computer-Science</category>
             <category>Cpp</category>
+            <category>Computer-Science</category>
             <category>Algorithm</category>
             <category>Binary-Search</category>
             <pubDate>Fri, 16 Sep 2022 20:28:29 +0800</pubDate>

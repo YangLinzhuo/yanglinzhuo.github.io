@@ -7,34 +7,34 @@
         <language>zh-CN</language>
         <pubDate>Thu, 30 Sep 2021 00:30:29 +0800</pubDate>
         <lastBuildDate>Thu, 30 Sep 2021 00:30:29 +0800</lastBuildDate>
+        <category>Cpp</category>
         <category>Computer-Science</category>
         <category>Configs</category>
         <category>CUDA</category>
         <category>PyTorch</category>
-        <category>Cpp</category>
         <category>TiddlyWiki</category>
         <category>Fishing</category>
         <category>Emacs</category>
-        <category>AncientBook</category>
-        <category>Book</category>
-        <category>Essay</category>
-        <category>Game</category>
-        <category>Music</category>
-        <category>Movie</category>
         <category>Hexo</category>
         <category>Valine</category>
         <category>Waline</category>
+        <category>AncientBook</category>
+        <category>Book</category>
+        <category>Movie</category>
+        <category>Essay</category>
+        <category>Game</category>
+        <category>Music</category>
         <category>Algorithm</category>
         <category>Binary-Search</category>
-        <category>Coding-Interviews</category>
-        <category>Programming-Pearls</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
         <category>WSL2</category>
         <category>CLion</category>
         <category>Oh-My-Zsh</category>
         <category>WSL</category>
-        <category>History</category>
-        <category>ChineseHistory</category>
-        <category>Table</category>
+        <category>Coding-Interviews</category>
+        <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
         <category>dataclass</category>
@@ -42,8 +42,8 @@
             <guid isPermalink="true">https://linn-ylz.com/Essay/love-letter/</guid>
             <title>岩井俊二的《情书》</title>
             <link>https://linn-ylz.com/Essay/love-letter/</link>
-            <category>Essay</category>
             <category>Movie</category>
+            <category>Essay</category>
             <pubDate>Thu, 30 Sep 2021 00:30:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;B 站今天上线了岩井俊二的《情书》，今年不久前内地也重映过，趁着机会补上了很久之前就在计划中的这部影片。以前总是冲着某个宣传去看一部电影，现在更喜欢像这样在某段闲暇时间，在某个契机之下，一个人静静地，关掉弹幕，阅读一个新的故事。&lt;/p&gt;
