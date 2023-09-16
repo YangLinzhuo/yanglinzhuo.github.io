@@ -38,15 +38,6 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/wiki/index.html</loc>
-    
-    <lastmod>2022-11-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://linn-ylz.com/tags/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
@@ -56,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/about/index.html</loc>
+    <loc>https://linn-ylz.com/wiki/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
     
@@ -66,6 +57,15 @@
   
   <url>
     <loc>https://linn-ylz.com/categories/index.html</loc>
+    
+    <lastmod>2022-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/about/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
     
@@ -427,20 +427,6 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/AncientBook/</loc>
-    <lastmod>2023-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linn-ylz.com/tags/Book/</loc>
-    <lastmod>2023-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linn-ylz.com/tags/Essay/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -456,6 +442,20 @@
   
   <url>
     <loc>https://linn-ylz.com/tags/Music/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/tags/AncientBook/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/tags/Book/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -504,13 +504,6 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/Coding-Interviews/</loc>
-    <lastmod>2023-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linn-ylz.com/tags/WSL2/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -540,6 +533,13 @@
   
   <url>
     <loc>https://linn-ylz.com/tags/WSL/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/tags/Coding-Interviews/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -653,14 +653,14 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/categories/Computer-Science/Coding-Interviews/</loc>
+    <loc>https://linn-ylz.com/categories/Computer-Science/Configs/Powershell/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/categories/Computer-Science/Configs/Powershell/</loc>
+    <loc>https://linn-ylz.com/categories/Computer-Science/Coding-Interviews/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
