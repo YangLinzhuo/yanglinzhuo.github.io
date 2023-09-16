@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/index.html</loc>
+    <loc>https://linn-ylz.com/links/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/links/index.html</loc>
+    <loc>https://linn-ylz.com/tags/index.html</loc>
     
     <lastmod>2022-11-09</lastmod>
     
@@ -441,13 +441,6 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/Movie/</loc>
-    <lastmod>2023-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linn-ylz.com/tags/Essay/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -463,6 +456,13 @@
   
   <url>
     <loc>https://linn-ylz.com/tags/Music/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/tags/Movie/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -490,13 +490,6 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/Coding-Interviews/</loc>
-    <lastmod>2023-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linn-ylz.com/tags/Algorithm/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -511,7 +504,7 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/tags/Oh-My-Zsh/</loc>
+    <loc>https://linn-ylz.com/tags/Coding-Interviews/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -526,6 +519,13 @@
   
   <url>
     <loc>https://linn-ylz.com/tags/CLion/</loc>
+    <lastmod>2023-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linn-ylz.com/tags/Oh-My-Zsh/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -646,14 +646,14 @@
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/categories/Computer-Science/Coding-Interviews/</loc>
+    <loc>https://linn-ylz.com/categories/Computer-Science/Algorithm/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linn-ylz.com/categories/Computer-Science/Algorithm/</loc>
+    <loc>https://linn-ylz.com/categories/Computer-Science/Coding-Interviews/</loc>
     <lastmod>2023-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

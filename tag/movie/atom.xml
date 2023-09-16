@@ -14,19 +14,19 @@
     <category term="Emacs" />
     <category term="AncientBook" />
     <category term="Book" />
-    <category term="Movie" />
     <category term="Essay" />
     <category term="Game" />
     <category term="Music" />
+    <category term="Movie" />
     <category term="Hexo" />
     <category term="Valine" />
     <category term="Waline" />
-    <category term="Coding-Interviews" />
     <category term="Algorithm" />
     <category term="Binary-Search" />
-    <category term="Oh-My-Zsh" />
+    <category term="Coding-Interviews" />
     <category term="WSL2" />
     <category term="CLion" />
+    <category term="Oh-My-Zsh" />
     <category term="Powershell" />
     <category term="WSL" />
     <category term="Programming-Pearls" />
@@ -80,8 +80,8 @@
 &lt;h2 id=&#34;关于柏原崇&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#关于柏原崇&#34;&gt;#&lt;/a&gt; 关于柏原崇&lt;/h2&gt;
 &lt;p&gt;柏原崇被称为 “世纪末最后的美少年”。确实，图书馆的那个读书的场景，以及搬家前给（女）树送书的画面，非常有一种「少年感」。&lt;/p&gt;
 </content>
-        <category term="Movie" />
         <category term="Essay" />
+        <category term="Movie" />
         <updated>2021-09-29T16:30:29.000Z</updated>
     </entry>
 </feed>
