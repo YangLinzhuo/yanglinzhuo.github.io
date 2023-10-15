@@ -3,10 +3,10 @@ https://linn-ylz.com/Computer-Science/Python/python-type-annotations-and-custom-
 https://linn-ylz.com/Computer-Science/Configs/powershell-configs/
 https://linn-ylz.com/Computer-Science/Python/dataclass-and-YAML-transform/
 https://linn-ylz.com/tags/index.html
-https://linn-ylz.com/links/index.html
 https://linn-ylz.com/wiki/index.html
-https://linn-ylz.com/categories/index.html
+https://linn-ylz.com/links/index.html
 https://linn-ylz.com/about/index.html
+https://linn-ylz.com/categories/index.html
 https://linn-ylz.com/Computer-Science/Algorithm/abount-binary-search/
 https://linn-ylz.com/History/Chinese-History/chinese-era-table/
 https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/
@@ -47,6 +47,7 @@ https://linn-ylz.com/tags/CUDA/
 https://linn-ylz.com/tags/PyTorch/
 https://linn-ylz.com/tags/TiddlyWiki/
 https://linn-ylz.com/tags/Fishing/
+https://linn-ylz.com/tags/Emacs/
 https://linn-ylz.com/tags/AncientBook/
 https://linn-ylz.com/tags/Book/
 https://linn-ylz.com/tags/Essay/
@@ -56,7 +57,6 @@ https://linn-ylz.com/tags/Movie/
 https://linn-ylz.com/tags/Hexo/
 https://linn-ylz.com/tags/Valine/
 https://linn-ylz.com/tags/Waline/
-https://linn-ylz.com/tags/Emacs/
 https://linn-ylz.com/tags/Algorithm/
 https://linn-ylz.com/tags/Binary-Search/
 https://linn-ylz.com/tags/Coding-Interviews/
@@ -76,11 +76,11 @@ https://linn-ylz.com/tags/Table/
 https://linn-ylz.com/categories/Computer-Science/
 https://linn-ylz.com/categories/Computer-Science/Configs/
 https://linn-ylz.com/categories/TiddlyWiki/
+https://linn-ylz.com/categories/Computer-Science/Emacs/
 https://linn-ylz.com/categories/Essay/
 https://linn-ylz.com/categories/Hexo/
-https://linn-ylz.com/categories/Computer-Science/Emacs/
-https://linn-ylz.com/categories/Computer-Science/Algorithm/
 https://linn-ylz.com/categories/Computer-Science/CUDA/
+https://linn-ylz.com/categories/Computer-Science/Algorithm/
 https://linn-ylz.com/categories/Computer-Science/Coding-Interviews/
 https://linn-ylz.com/categories/Computer-Science/Configs/Powershell/
 https://linn-ylz.com/categories/Computer-Science/Programming-Pearls/
