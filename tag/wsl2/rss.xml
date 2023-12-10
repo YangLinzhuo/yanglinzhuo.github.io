@@ -14,15 +14,15 @@
         <category>PyTorch</category>
         <category>TiddlyWiki</category>
         <category>Fishing</category>
+        <category>Hexo</category>
+        <category>Valine</category>
+        <category>Waline</category>
         <category>AncientBook</category>
         <category>Book</category>
         <category>Essay</category>
         <category>Game</category>
         <category>Music</category>
         <category>Movie</category>
-        <category>Hexo</category>
-        <category>Valine</category>
-        <category>Waline</category>
         <category>Emacs</category>
         <category>Algorithm</category>
         <category>Binary-Search</category>
@@ -32,14 +32,14 @@
         <category>Oh-My-Zsh</category>
         <category>Powershell</category>
         <category>WSL</category>
-        <category>Python</category>
-        <category>YAML</category>
-        <category>dataclass</category>
-        <category>Type-Annotation</category>
         <category>Programming-Pearls</category>
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
+        <category>Type-Annotation</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/</guid>
             <title>安装 WSL2</title>
