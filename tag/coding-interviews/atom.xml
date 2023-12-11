@@ -11,32 +11,32 @@
     <category term="PyTorch" />
     <category term="TiddlyWiki" />
     <category term="Fishing" />
-    <category term="Hexo" />
-    <category term="Valine" />
-    <category term="Waline" />
     <category term="AncientBook" />
     <category term="Book" />
     <category term="Essay" />
     <category term="Game" />
     <category term="Music" />
     <category term="Movie" />
+    <category term="Hexo" />
+    <category term="Valine" />
+    <category term="Waline" />
     <category term="Emacs" />
     <category term="Algorithm" />
     <category term="Binary-Search" />
-    <category term="Coding-Interviews" />
     <category term="WSL2" />
     <category term="CLion" />
     <category term="Oh-My-Zsh" />
     <category term="Powershell" />
     <category term="WSL" />
+    <category term="Coding-Interviews" />
     <category term="Programming-Pearls" />
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
     <category term="Python" />
+    <category term="Type-Annotation" />
     <category term="YAML" />
     <category term="dataclass" />
-    <category term="Type-Annotation" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Coding-Interviews/coding-interviews-11/</id>
         <title>剑指 Offer （十一）</title>
