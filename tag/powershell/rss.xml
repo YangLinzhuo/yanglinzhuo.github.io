@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>林•初夏 • Posts by &#34;powershell&#34; tag</title>
+        <link>https://linn-ylz.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 01 Apr 2023 15:44:34 +0800</pubDate>
+        <lastBuildDate>Sat, 01 Apr 2023 15:44:34 +0800</lastBuildDate>
+        <category>AncientBook</category>
+        <category>Book</category>
+        <category>Essay</category>
+        <category>Game</category>
+        <category>Music</category>
+        <category>Movie</category>
+        <category>Hexo</category>
+        <category>Valine</category>
+        <category>Waline</category>
+        <category>TiddlyWiki</category>
+        <category>Fishing</category>
+        <category>Computer-Science</category>
+        <category>Algorithm</category>
+        <category>Cpp</category>
+        <category>Binary-Search</category>
+        <category>CUDA</category>
+        <category>Coding-Interviews</category>
+        <category>Configs</category>
+        <category>WSL2</category>
+        <category>CLion</category>
+        <category>PyTorch</category>
+        <category>Oh-My-Zsh</category>
+        <category>Powershell</category>
+        <category>WSL</category>
+        <category>Emacs</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
+        <category>Type-Annotation</category>
+        <category>Programming-Pearls</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/powershell-configs/</guid>
+            <title>Powershell 配置</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/powershell-configs/</link>
+            <category>Computer-Science</category>
+            <category>Configs</category>
+            <category>Powershell</category>
+            <pubDate>Sat, 01 Apr 2023 15:44:34 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;虽然目前  &lt;code&gt;Windows&lt;/code&gt;  对  &lt;code&gt;WSL&lt;/code&gt;  已经支持很多常规的操作，但是有时候仍然不得不在  &lt;code&gt;Windows&lt;/code&gt;  环境下执行某些命令。尤其  &lt;code&gt;WSL&lt;/code&gt;  的文件  &lt;code&gt;IO&lt;/code&gt;  速率相比于原生  &lt;code&gt;Windows&lt;/code&gt;  系统存在一定差距，尤其是  &lt;code&gt;Git&lt;/code&gt;  仓库稍微大一点便能明显感受到延迟。此外， &lt;code&gt;WSL&lt;/code&gt;  的网络代理有时候也会出现故障， &lt;code&gt;Git&lt;/code&gt;  操作很不方便。因此，基于  &lt;code&gt;Powershell&lt;/code&gt;  配置一些支持常用操作，能够更方便自己的开发。&lt;/p&gt;
+&lt;h2 id=&#34;升级&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#升级&#34;&gt;#&lt;/a&gt; 升级&lt;/h2&gt;
+&lt;p&gt;由于需要使用到一些模块，因此需要首先升级系统的  &lt;code&gt;Powershell&lt;/code&gt;  ， &lt;code&gt;Windows&lt;/code&gt;  官方提供了多种可选方式升级或安装最新的  &lt;code&gt;Powershell&lt;/code&gt; ，参见&lt;a href=&#34;https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3&#34;&gt;在 Windows 上安装 PowerShell - PowerShell | Microsoft Learn&lt;/a&gt;。&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;如果网络状况良好，那么推荐直接使用  &lt;code&gt;winget&lt;/code&gt;  命令安装。否则也可以下载  &lt;code&gt;msi&lt;/code&gt;  安装包安装。&lt;/p&gt;
+&lt;h2 id=&#34;autosuggestion-工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#autosuggestion-工具&#34;&gt;#&lt;/a&gt; Autosuggestion 工具&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;WSL&lt;/code&gt;  下可以通过  &lt;code&gt;oh-my-zsh&lt;/code&gt;  配置  &lt;code&gt;auto-suggestion&lt;/code&gt;  工具，可以在输入命令时显示以往使用的命令。 &lt;code&gt;Powershell&lt;/code&gt;  也可以配置类似的工具。&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34; id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;使用该工具需要安装相关依赖：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Install-Module&lt;/span&gt; PSReadLine &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;RequiredVersion 2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装完成后，可以使用以下命令启用 Autosuggestion 功能：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Import-Module&lt;/span&gt; PSReadLine&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-PSReadLineOption&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;PredictionSource History&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以上命令只在当前窗口有效。如果需要默认启动，需要编辑配置文件。&lt;/p&gt;
+&lt;h3 id=&#34;编辑-powershell-配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑-powershell-配置文件&#34;&gt;#&lt;/a&gt; 编辑  &lt;code&gt;Powershell&lt;/code&gt;  配置文件&lt;/h3&gt;
+&lt;p&gt;首先需要检查是否已有配置文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Test-path&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$profile&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果结果为  &lt;code&gt;True&lt;/code&gt; ，说明已经包含该文件。为  &lt;code&gt;False&lt;/code&gt; ，则需要自行生成：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;New-item&lt;/span&gt; –&lt;span class=&#34;token function&#34;&gt;type&lt;/span&gt; file –force &lt;span class=&#34;token variable&#34;&gt;$profile&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;执行命令设置执行权限（该命令需要管理员权限）：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-ExecutionPolicy&lt;/span&gt; RemoteSigned&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后编辑该文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;notepad &lt;span class=&#34;token variable&#34;&gt;$profile&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;将语句添加到该配置文件中：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Import-Module&lt;/span&gt; PSReadLine&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-PSReadLineOption&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;PredictionSource History&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此外，该工具也支持其他功能：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Shows navigable menu of all options when hitting Tab&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-PSReadlineKeyHandler&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Key Tab &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;Function&lt;/span&gt; MenuComplete&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Autocompletion for arrow keys&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-PSReadlineKeyHandler&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Key UpArrow &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;Function&lt;/span&gt; HistorySearchBackward&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Set-PSReadlineKeyHandler&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;Key DownArrow &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;Function&lt;/span&gt; HistorySearchForward&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;ls-命令显示高亮&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls-命令显示高亮&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ls&lt;/code&gt;  命令显示高亮&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/a/30788506&#34;&gt;https://stackoverflow.com/a/30788506&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;通过以下命令安装  &lt;code&gt;Color&lt;/code&gt;  模块，支持  &lt;code&gt;ls&lt;/code&gt;  命令显示高亮&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn3&#34; id=&#34;fnref3&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Install-Module&lt;/span&gt; Color&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后，在配置文件中添加导入模块语句：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Import-Module&lt;/span&gt; Color&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;美化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#美化&#34;&gt;#&lt;/a&gt; 美化&lt;/h2&gt;
+&lt;p&gt;类似于  &lt;code&gt;oh-my-zsh&lt;/code&gt; ， &lt;code&gt;Powershell&lt;/code&gt;  可以使用  &lt;code&gt;oh-my-posh&lt;/code&gt;  来美化。&lt;/p&gt;
+&lt;p&gt;使用以下命令安装  &lt;code&gt;oh-my-posh&lt;/code&gt; ：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;winget install JanDeDobbeleer&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;OhMyPosh &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;s winget&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;启用主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启用主题&#34;&gt;#&lt;/a&gt; 启用主题&lt;/h3&gt;
+&lt;p&gt;使用以下命令可以激活自己想要的主题：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;oh-my-posh init pwsh &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;config &lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token variable&#34;&gt;$env&lt;/span&gt;:POSH_THEMES_PATH/ys.omp.json&#34;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;Invoke-Expression&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中  &lt;code&gt;ys&lt;/code&gt;  是想要启用的主题的名称，终端主题可以在官方网站主题页面查看。&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn4&#34; id=&#34;fnref4&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;以上命令也可以加入到  &lt;code&gt;Powershell&lt;/code&gt;  的配置文件中。&lt;/p&gt;
+&lt;h3 id=&#34;安装字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装字体&#34;&gt;#&lt;/a&gt; 安装字体&lt;/h3&gt;
+&lt;p&gt;许多主题可能用到了特殊字符，如果终端中出现了方块显示的符号，可以下载官方推荐的 Nerd 字体。&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn5&#34; id=&#34;fnref5&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;字体下载网站：&lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;Nerd Fonts - Iconic font aggregator, glyphs/icons collection, &amp;amp; fonts patcher&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;posh-git-模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#posh-git-模块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;posh-git&lt;/code&gt;  模块&lt;/h3&gt;
+&lt;p&gt;安装  &lt;code&gt;posh-git&lt;/code&gt;  模块可以为  &lt;code&gt;oh-my-posh&lt;/code&gt;  提供  &lt;code&gt;git&lt;/code&gt;  状态显示和命令补全等功能。使用以下命令安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;Install-Module&lt;/span&gt; posh-git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;并在配置文件中添加导入语句。&lt;/p&gt;
+&lt;p&gt;注意，在某些较大的  &lt;code&gt;Git&lt;/code&gt;  仓库中，该模块可能会影响实际的性能，因此可以视情况决定是否启用。&lt;/p&gt;
+&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;section class=&#34;footnotes&#34;&gt;
+&lt;ol class=&#34;footnotes-list&#34;&gt;
+&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.3&#34;&gt;在 Windows 上安装 PowerShell - PowerShell | Microsoft Learn&lt;/a&gt; &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://dev.to/animo/fish-like-autosuggestion-in-powershell-21ec&#34;&gt;Fish-like Autosuggestion in Powershell - DEV Community 👩‍💻👨‍💻&lt;/a&gt; &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn3&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/9406434/powershell-properly-coloring-get-childitem-output-once-and-for-all/30788506#30788506&#34;&gt;colors - Powershell: Properly coloring Get-Childitem output once and for all - Stack Overflow&lt;/a&gt; &lt;a href=&#34;#fnref3&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn4&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://ohmyposh.dev/docs/themes&#34;&gt;Themes | Oh My Posh&lt;/a&gt; &lt;a href=&#34;#fnref4&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn5&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://www.nerdfonts.com/font-downloads&#34;&gt;Nerd Fonts - Iconic font aggregator, glyphs/icons collection, &amp;amp; fonts patcher&lt;/a&gt; &lt;a href=&#34;#fnref5&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>林•初夏 • Posts by &#34;pytorch&#34; tag</title>
+        <link>https://linn-ylz.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 08 Oct 2021 23:32:30 +0800</pubDate>
+        <lastBuildDate>Fri, 08 Oct 2021 23:32:30 +0800</lastBuildDate>
+        <category>AncientBook</category>
+        <category>Book</category>
+        <category>Essay</category>
+        <category>Game</category>
+        <category>Music</category>
+        <category>Movie</category>
+        <category>Hexo</category>
+        <category>Valine</category>
+        <category>Waline</category>
+        <category>TiddlyWiki</category>
+        <category>Fishing</category>
+        <category>Computer-Science</category>
+        <category>Algorithm</category>
+        <category>Cpp</category>
+        <category>Binary-Search</category>
+        <category>CUDA</category>
+        <category>Coding-Interviews</category>
+        <category>Configs</category>
+        <category>WSL2</category>
+        <category>CLion</category>
+        <category>PyTorch</category>
+        <category>Oh-My-Zsh</category>
+        <category>Powershell</category>
+        <category>WSL</category>
+        <category>Emacs</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
+        <category>Type-Annotation</category>
+        <category>Programming-Pearls</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
+        <item>
+            <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Configs/clion-wsl2-cuda-configs/</guid>
+            <title>通过 CLion 在 WSL2 的 CUDA 环境下使用 libtorch</title>
+            <link>https://linn-ylz.com/Computer-Science/Configs/clion-wsl2-cuda-configs/</link>
+            <category>Computer-Science</category>
+            <category>CUDA</category>
+            <category>Configs</category>
+            <category>WSL2</category>
+            <category>CLion</category>
+            <category>PyTorch</category>
+            <pubDate>Fri, 08 Oct 2021 23:32:30 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;说明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h1&gt;
+&lt;p&gt;本文记录使用  &lt;code&gt;CLion&lt;/code&gt;  的  &lt;code&gt;IDE&lt;/code&gt;  环境，使用  &lt;code&gt;WSL2&lt;/code&gt;  环境下的  &lt;code&gt;CUDA&lt;/code&gt;  来调用  &lt;code&gt;PyTorch&lt;/code&gt;  的  &lt;code&gt;libtorch&lt;/code&gt;  库内容。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;libtorch&lt;/code&gt;  是  &lt;code&gt;PyTorch&lt;/code&gt;  框架提供的  &lt;code&gt;C++&lt;/code&gt;  接口，因为最近的课题对性能有比较高的要求，并且有自定义算子的需求，所以需要用到相关的代码。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WSL2&lt;/code&gt;  下的  &lt;code&gt;CUDA&lt;/code&gt;  环境配置可以参考&lt;a href=&#34;/Computer-Science/Configs/wsl2-cuda-configs/&#34; title=&#34;WSL2 下的 CUDA 配置&#34;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;h2 id=&#34;下载-libtorch&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-libtorch&#34;&gt;#&lt;/a&gt; 下载  &lt;code&gt;libtorch&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;从  &lt;code&gt;PyTorch&lt;/code&gt;  的&lt;a href=&#34;https://pytorch.org/&#34;&gt;官方网站&lt;/a&gt;下载自己所需版本的  &lt;code&gt;libtorch&lt;/code&gt;  。注意和自己的  &lt;code&gt;CUDA&lt;/code&gt;  版本也要对应。&lt;/p&gt;
+&lt;h2 id=&#34;clion-配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#clion-配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;CLion&lt;/code&gt;  配置&lt;/h2&gt;
+&lt;p&gt;打开  &lt;code&gt;CLion&lt;/code&gt;  新建一个  &lt;code&gt;CUDA executable&lt;/code&gt;  工程。然后修改  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  和  &lt;code&gt;CMake&lt;/code&gt;  的相关配置。&lt;/p&gt;
+&lt;h3 id=&#34;wsl2-环境配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#wsl2-环境配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;WSL2&lt;/code&gt;  环境配置&lt;/h3&gt;
+&lt;p&gt;参考这篇&lt;a href=&#34;https://zhuanlan.zhihu.com/p/272522594&#34;&gt;知乎文章&lt;/a&gt;中的&lt;strong&gt;第三步 - 配置 Clion 内的 Toolchains&lt;/strong&gt; 这一部分的内容。&lt;/p&gt;
+&lt;h3 id=&#34;cmake-配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cmake-配置&#34;&gt;#&lt;/a&gt;  &lt;code&gt;CMake&lt;/code&gt;  配置&lt;/h3&gt;
+&lt;p&gt;按照  &lt;code&gt;File&lt;/code&gt; -&amp;gt; &lt;code&gt;Settings&lt;/code&gt; -&amp;gt; &lt;code&gt;Build,Execution,Development&lt;/code&gt; -&amp;gt; &lt;code&gt;CMake&lt;/code&gt;  的路径，在其中的  &lt;code&gt;CMake options&lt;/code&gt;  选项中添加  &lt;code&gt;-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc&lt;/code&gt;  的内容。如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;/images/clion-wsl2-cuda-configs-cmake-options.jpg&#34; alt=&#34;CMake options&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修改-cmakeliststxt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改-cmakeliststxt&#34;&gt;#&lt;/a&gt; 修改  &lt;code&gt;CMakeLists.txt&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;首先将下载好的  &lt;code&gt;libtorch&lt;/code&gt;  文件解压，这里我解压到了本文件夹下的  &lt;code&gt;libtorch&lt;/code&gt;  文件夹中。在  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  文件中设置  &lt;code&gt;CMAKE_PREFIX_PATH&lt;/code&gt;  变量，添加  &lt;code&gt;libtorch&lt;/code&gt;  的路径。添加  &lt;code&gt;find_package(Torch REQUIRED)&lt;/code&gt;  语句，以及  &lt;code&gt;target_link_libraries(ProjectName &amp;quot;$&amp;#123;TORCH_LIBRARIES&amp;#125;&amp;quot;)&lt;/code&gt; ，这两行是最关键的内容。&lt;/p&gt;
+&lt;figure class=&#34;highlight cmake&#34;&gt;&lt;figcaption data-lang=&#34;CMake&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;project&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ProjectName CXX CUDA&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;CMAKE_PREFIX_PATH&lt;/span&gt; libtorch&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;find_package&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Torch REQUIRED&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;target_link_libraries&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;ProjectName &lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;$&amp;#123;&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;TORCH_LIBRARIES&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上方的代码中省去了  &lt;code&gt;CLion&lt;/code&gt;  中默认提供的内容，以便让内容更清晰。&lt;/p&gt;
+&lt;h3 id=&#34;代码测试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代码测试&#34;&gt;#&lt;/a&gt; 代码测试&lt;/h3&gt;
+&lt;p&gt;在工程中添加一个  &lt;code&gt;main.cpp&lt;/code&gt;  文件，注意在  &lt;code&gt;CMakeLists.txt&lt;/code&gt;  也要对应修改  &lt;code&gt;add_executable(ProjectName main.cpp)&lt;/code&gt;  这一行的内容。&lt;/p&gt;
+&lt;p&gt;在  &lt;code&gt;main.cpp&lt;/code&gt;  中添加如下的测试代码：&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;torch/torch.h&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    torch&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;Tensor tensor &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; torch&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;rand&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; tensor &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; tensor&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; std&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果编译并运行成功，那么配置完成。&lt;/p&gt;
+&lt;h1 id=&#34;可能的错误&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可能的错误&#34;&gt;#&lt;/a&gt; 可能的错误&lt;/h1&gt;
+&lt;p&gt;如果碰到  &lt;code&gt;PyTorch requires cuDNN 7 and above.&lt;/code&gt;  这一问题，可以参考这个 &lt;a href=&#34;https://github.com/pytorch/pytorch/issues/40965&#34;&gt; &lt;code&gt;GitHub&lt;/code&gt;  链接&lt;/a&gt;。问题的原因在于无法识别系统中的  &lt;code&gt;cuDNN&lt;/code&gt;  版本。我自己碰到这个问题的原因是没有把  &lt;code&gt;cuDNN&lt;/code&gt;  中的  &lt;code&gt;cudnn_version.h&lt;/code&gt;  这一头文件复制到对应位置，在复制之后问题解决。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
