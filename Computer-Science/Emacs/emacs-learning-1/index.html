@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><meta name="google-site-verification" content="Ig99nzT1giHSuUb64OgOizEW1I6xFnRm9g9SFZaybjs"/><link rel="alternate" href="/rss.xml" title="林•初夏" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="林•初夏" type="application/atom+xml"><link rel="alternate" type="application/json" title="林•初夏" href="https://linn-ylz.com/feed.json"/><link rel="preconnect" href="https://s4.zstatic.net"/><link rel="preconnect" href="https://at.alicdn.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="none" onload="this.media&#x3D;&#39;all&#39;"><link rel="stylesheet" href="/css/app.css?v=0.4.16"><link rel="modulepreload" href="/js/chunk-667ES3D4.js"></link><link rel="modulepreload" href="/js/chunk-FG2S7S6P.js"></link><link rel="modulepreload" href="/js/chunk-N3ZNV2ZN.js"></link><link rel="modulepreload" href="/js/chunk-NLQIIQGF.js"></link><link rel="modulepreload" href="/js/chunk-WIQECBEN.js"></link><link rel="modulepreload" href="/js/comments-TXSIANSE.js"></link><link rel="modulepreload" href="/js/copy-tex-BYMZQ726.js"></link><link rel="modulepreload" href="/js/index.esm-ZGOUTM2K.js"></link><link rel="modulepreload" href="/js/post-KYVGI6PV.js"></link><link rel="modulepreload" href="/js/quicklink-XYTM3HYO.js"></link><link rel="modulepreload" href="/js/siteInit.js"></link><link rel="modulepreload" href="/js/waline-PD3THQIJ.js"></link><link rel="stylesheet" href="/css/comments-LAB2J3GR.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="stylesheet" href="/css/waline-7JVHAYE3.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(16).webp" as="image" fetchpriority="high"><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(93).webp" as="image" fetchpriority="high"><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(56).webp" as="image" fetchpriority="high"><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(77).webp" as="image" fetchpriority="high"><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(21).webp" as="image" fetchpriority="high"><link rel="preload" href="https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(75).webp" as="image" fetchpriority="high"><meta name="keywords" content="Computer-Science,"/><link rel="canonical" href="https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-1/"><title>Emacs 学习（一）基本操作</title><!-- hexo injector head_end start --><script> let HEXO_MMEDIA_DATA = { js: [], css: [], aplayerData: [], metingData: [], artPlayerData: [], dplayerData: []}; </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Emacs 学习（一）基本操作</h1><div class="meta"><span class="item" title="创建时间：2022-01-09 16:13:51"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2022-01-09T16:13:51+08:00">2022-01-09</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>5.6k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>5 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Linn's Shoka</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(16).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(93).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(56).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(77).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(21).webp&quot;);"></li><li class="item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/YangLinzhuo/yanglinzhuo.github.io@latest/images/article-cover/img(75).webp&quot;);"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/Computer-Science/" itemprop="item" rel="index" title="分类于Computer-Science"><span itemprop="name">Computer-Science<meta itemprop="position" content="0"/></span></a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/Computer-Science/Emacs/" itemprop="item" rel="index" title="分类于Emacs"><span itemprop="name">Emacs<meta itemprop="position" content="1"/></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-1/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/my_small_avatar.jpg"/><meta itemprop="name" content="Linn"/><meta itemprop="description" content="Linn 的书架, "/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="林•初夏"/></span><div class="body md" itemprop="articleBody"><h1 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h1>
+<p>本系列内容基于  <code>Emacs China</code>  提供的教程<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p>
+<p><code>Emcas</code>  的深入学习可以阅读  <code>GNU</code>  提供的教程<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。</p>
+<h1 id="预备说明"><a class="markdownIt-Anchor" href="#预备说明">#</a> 预备说明</h1>
+<table>
+<caption id="" style="caption-side: bottom">重要快捷键缩写</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C</span></td>
+<td style="text-align:left"><span class="kbd red">Ctrl</span> 键</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">S</span></td>
+<td style="text-align:left"><span class="kbd red">Shift</span> 键</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M</span></td>
+<td style="text-align:left"><span class="kbd red">Alt</span> 键</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">RET</span></td>
+<td style="text-align:left"><span class="kbd red">Enter</span> 键</td>
+</tr>
+</tbody>
+</table>
+<p><span class="kbd red">C-x</span> <span class="kbd red">d</span> <span class="kbd red">RET</span> 代表先同时按下 <span class="kbd red">Ctrl</span> 和 <span class="kbd red">x</span>，再按下 <span class="kbd red">d</span>，最后再按下 <span class="kbd red">RET</span>。</p>
+<p><code>Emacs</code>  里的大部分地方都支持自动补全，快捷键是 <span class="kbd red">TAB</span></p>
+<h1 id="快捷键"><a class="markdownIt-Anchor" href="#快捷键">#</a> 快捷键</h1>
+<h2 id="光标移动"><a class="markdownIt-Anchor" href="#光标移动">#</a> 光标移动</h2>
+<table>
+<caption id="1" style="caption-side: bottom">光标移动快捷键 1</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-f</span></td>
+<td style="text-align:left">前移一个字符，<span class="kbd red">f</span> 代表 forward；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-b</span></td>
+<td style="text-align:left">后移一个字符，<span class="kbd red">b</span> 代表 backward；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-f</span></td>
+<td style="text-align:left">前移一个 word；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-b</span></td>
+<td style="text-align:left">后移一个 word；</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption id="2" style="caption-side: bottom">光标移动快捷键 2</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-p</span></td>
+<td style="text-align:left">上移至前一行，<span class="kbd red">p</span> 代表 previous；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-n</span></td>
+<td style="text-align:left">上移至下一行，<span class="kbd red">n</span> 代表 next；</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption id="3" style="caption-side: bottom">光标移动快捷键 3</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-a</span></td>
+<td style="text-align:left">移至行首，<span class="kbd red">a</span> 代表 ahead；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-e</span></td>
+<td style="text-align:left">移至行尾，<span class="kbd red">e</span> 代表 end；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-a</span></td>
+<td style="text-align:left">前移一个 sentence；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-e</span></td>
+<td style="text-align:left">后移一个 sentence；</td>
+</tr>
+</tbody>
+</table>
+<h2 id="屏幕移动"><a class="markdownIt-Anchor" href="#屏幕移动">#</a> 屏幕移动</h2>
+<table>
+<caption id="4" style="caption-side: bottom">屏幕移动快捷键 4</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-v</span></td>
+<td style="text-align:left">屏幕向下滚动一页，类似于键盘中的 <span class="kbd red">PgUp</span>；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-v</span></td>
+<td style="text-align:left">屏幕向上滚动一页，类似于键盘中的 <span class="kbd red">PgDown</span></td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-l</span></td>
+<td style="text-align:left">屏幕光标内容居中</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-&lt;</span></td>
+<td style="text-align:left">光标移动到文件最开始的位置，注意 <span class="kbd red">&lt;</span> 需要按住 <span class="kbd red">Shift</span> 键，所以实际上是按住三个键；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-&gt;</span></td>
+<td style="text-align:left">光标移动到文件最末尾的位置，同上，需要按住 <span class="kbd red">Shift</span> 键；</td>
+</tr>
+</tbody>
+</table>
+<h2 id="接收数字作为参数"><a class="markdownIt-Anchor" href="#接收数字作为参数">#</a> 接收数字作为参数</h2>
+<p>上述很多命令均只能移动一个字符、一个 word 或者一个 sentence。在按下按键之前，先按下 <span class="kbd red">C-u</span>，再输入一个数字之后，再按下上述命令，则可以移动更多数量的单位。</p>
+<p>例如：<span class="kbd red">C-u 8 C-f</span> 向前移动 8 个字符。</p>
+<h2 id="其他"><a class="markdownIt-Anchor" href="#其他">#</a> 其他</h2>
+<p>打断组合键为 <span class="kbd red">C-g</span> ，它用于终端取消之前的指令。</p>
+<p>编辑器内显示行号可使用 <span class="kbd red">M-x</span>  <code>linum-mode</code>  来开启。</p>
+<h1 id="文本编辑操作"><a class="markdownIt-Anchor" href="#文本编辑操作">#</a> 文本编辑操作</h1>
+<p>插入和通常编辑器的文本输入一样。<span class="kbd red">RET</span> 表示回车键 <span class="kbd red">Enter</span>，用于换行。</p>
+<p>使用 <span class="kbd red">DEL</span> 删除，它表示 <span class="kbd red">Backspace</span> 键。这一点也和通常的文本编辑器相同。</p>
+<p>以上这两点是我想要改用  <code>Emacs</code>  的原因，之前尝试深入学习过  <code>Vim</code> ，但是切换模式这种操作方式，让我这种用习惯了普通编辑器的人很不适应。快捷键倒是可以多用多记，但是操作习惯要改变还是很难的，何况平常打字都是这种习惯。因此， <code>Emacs</code>  这种类似于普通编辑器的快捷键方式更符合我自身的习惯。</p>
+<p>除此之外，还有更高级的一些插入和删除方式。</p>
+<h2 id="插入"><a class="markdownIt-Anchor" href="#插入">#</a> 插入</h2>
+<p>上文中有提到 <span class="kbd red">C-u 8 C-f</span> 这种形式的命令，普通文本的插入也可以使用这种方式。向编写  <code>C++</code>  代码，添加注释的时候，可能会插入很多个  <code>*</code>  号，使用 <span class="kbd red">C-u 8 *</span> 就可以插入 8 个  <code>*</code>  号。</p>
+<h2 id="删除"><a class="markdownIt-Anchor" href="#删除">#</a> 删除</h2>
+<table>
+<caption id="1" style="caption-side: bottom">删除快捷键 1</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">DEL</span></td>
+<td style="text-align:left">删除（Delete）光标前的一个字符；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-d</span></td>
+<td style="text-align:left">删除光标后的一个字符；</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption id="2" style="caption-side: bottom">删除快捷键 2</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-DEL</span></td>
+<td style="text-align:left">剪切（Kill）光标当前所在 word 的起始位置到光标位置的字符；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-d</span></td>
+<td style="text-align:left">剪切光标到光标当前所在 word 的终止位置的字符；</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption id="3" style="caption-side: bottom">删除快捷键 3</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-k</span></td>
+<td style="text-align:left">剪切光标到当前行末尾的所有字符；（不包含换行符）</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">M-k</span></td>
+<td style="text-align:left">剪切光标到当前句子末尾的所有字符；（他们的差别类似于 <span class="kbd red">C-e</span> 和 <span class="kbd red">M-e</span>）</td>
+</tr>
+</tbody>
+</table>
+<p>对一个非空行使用 <span class="kbd red">C-k</span> 并不会剪切该行的换行符，此时如果再按下一次，则换行符也被剪切掉，而  <code>Windows</code>  中通常的 <span class="kbd red">Ctrl-x</span> 则直接包含换行符。</p>
+<p>如果在 <span class="kbd red">C-k</span> 前接上 <span class="kbd red">C-u 2</span> 这样的内容，则表示剪切多行，并且<ins class="danger">包含</ins>换行符。这个连续按多次 <span class="kbd red">C-k</span> 是不一样的。</p>
+<p>另一点不同则是，在同一行连续使用 <span class="kbd red">C-k</span>，多次剪切的内容会存储在一起，在粘贴的时候所有内容会一并粘贴。</p>
+<p><code>Emacs</code>  文档中使用 Delete 表示删除，Kill 表示剪切的含义。</p>
+<h2 id="选中"><a class="markdownIt-Anchor" href="#选中">#</a> 选中</h2>
+<p>在想要选中的起始位置按下 <span class="kbd red">C-SPC</span>，即 <span class="kbd red">Ctrl</span> 和 <span class="kbd red">Space</span> 键，此时底部信息栏会显示  <code>Mark set</code> ，表示进入选中模式；移动光标直到其包含所有想要选中的内容，按下 <span class="kbd red">C-w</span> 会将选中的文本剪切。使用 <span class="kbd red">M-w</span> 则是进行复制。</p>
+<h2 id="粘贴"><a class="markdownIt-Anchor" href="#粘贴">#</a> 粘贴</h2>
+<p><code>Emacs</code>  中使用 yank 表示粘贴，使用 <span class="kbd red">C-y</span> 进行粘贴操作。</p>
+<p>如果想要粘贴的内容不是最近剪切的，那么使用 <span class="kbd red">M-y</span> 可以对粘贴的内容进行替换，连续按下便会一直替换，直到又重新循环到最近剪切的内容。</p>
+<p>而 <span class="kbd red">M-y</span> 还可以添加正整数或者负整数作为参数，选择粘贴的内容。</p>
+<h2 id="搜索"><a class="markdownIt-Anchor" href="#搜索">#</a> 搜索</h2>
+<p><code>Emacs</code>  搜索是增量式（incremental）的，当输入内容时即开始搜索。使用 <span class="kbd red">C-s</span> 向前跳转，使用 <span class="kbd red">C-r</span> 向后跳转。按下回车将会终止搜索，<span class="kbd red">C-g</span> 同样能够终止搜索。</p>
+<h2 id="撤销"><a class="markdownIt-Anchor" href="#撤销">#</a> 撤销</h2>
+<p><span class="kbd red">C-/</span> 用于撤销。连续使用多次则可以逐次撤回过往的编辑内容。<span class="kbd red">C-_</span> 与 <span class="kbd red">C-/</span> 等价。<span class="spoiler" title="...">但是这个按键位置有点奇怪…</span></p>
+<p><span class="kbd red">C-x u</span> 也是撤销功能，但是需要按两次按键，不那么方便。</p>
+<h2 id="文件操作"><a class="markdownIt-Anchor" href="#文件操作">#</a> 文件操作</h2>
+<p><code>Emacs</code>  界面底部的信息栏左下角，显示当前编辑的文件名称。</p>
+<table>
+<caption id="1" style="caption-side: bottom">文件操作快捷键 1</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-x C-f</span></td>
+<td style="text-align:left">打开目标文件， f 代表 find/file；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-x C-s</span></td>
+<td style="text-align:left">保存当前缓冲区（Buffer）， s 代表 save。</td>
+</tr>
+</tbody>
+</table>
+<p><span class="kbd red">C-x</span> 是  <code>Emacs</code>  的快捷键中常用的前缀命令。其它常见的还有 <span class="kbd red">C-c</span>, <span class="kbd red">C-h</span>。</p>
+<p><code>Emacs</code>  存储文件时，会临时在原文件名称的末尾添加  <code>~</code>  后缀（这点和  <code>Office</code>  有些类似），以防止原文件丢失。</p>
+<h2 id="缓冲区"><a class="markdownIt-Anchor" href="#缓冲区">#</a> 缓冲区</h2>
+<p>如果我们在已有打开文件的同时，打开一个新的文件，之前的文件仍旧保留在  <code>Emacs</code>  的缓冲区之中。此时可以通过 <span class="kbd red">C-x C-f</span> 指令切换到该文件（就是打开目标文件的指令）。</p>
+<p>使用 <span class="kbd red">C-x C-b</span> 可以查看当前的缓冲区列表。再使用 [C-x 1] 可以退出缓冲区列表界面。</p>
+<p>当有多个缓冲区希望保存时，可以使用 {C-x s}{.kbd .red}，此时  <code>Emacs</code>  会对每个发生了修改的缓冲区进行询问，我们可以选择是否保存该缓冲区。</p>
+<h2 id="关闭-emacs"><a class="markdownIt-Anchor" href="#关闭-emacs">#</a> 关闭  <code>Emacs</code></h2>
+<p>使用 <span class="kbd red">C-x C-c</span> 关闭  <code>Emacs</code> ，在关闭前，会询问是否真的要关闭软件。</p>
+<h1 id="扩展指令集"><a class="markdownIt-Anchor" href="#扩展指令集">#</a> 扩展指令集</h1>
+<p><code>Emacs</code>  可以使用 <span class="kbd red">C-x</span> 或者 <span class="kbd red">M-x</span> 使用扩展指令，<span class="kbd red">C-x</span> 接续一个按键指令，而 <span class="kbd red">M-x</span> 则接续一个较长的命令名称，通常用于使用频率较少的指令。</p>
+<p>对于 <span class="kbd red">M-x</span> 执行的指令，可以通过 <span class="kbd red">Tab</span> 进行补全。</p>
+<h1 id="窗口"><a class="markdownIt-Anchor" href="#窗口">#</a> 窗口</h1>
+<p>在分屏操作之前，先学习一个新的命令 <span class="kbd red">C-x 1</span>，它将当前光标所在窗口最大化，并关闭其他所有窗口。</p>
+<p><span class="kbd red">C-x 2</span> 在窗口底部创建一个新的子窗口。通过 <span class="kbd red">C-x o</span> 可以在不同窗口之间进行切换，o 在这里表示 other。可以通过 <span class="kbd red">C-M-S-v</span> 使得另一个窗口的内容向下滚动，而不需要切换窗口。</p>
+<p><span class="kbd red">C-x 3</span> 则是在当前窗口右侧创建一个新的子窗口。</p>
+<p><span class="kbd red">C-x 5 2</span> 可以创建一个新的窗口，<span class="kbd red">C-x 5 0</span> 可以关闭当前光标所在窗口。当我们较慢速度输入指令的时候，可以看到其他可用的指令，这是只需要按下对应的按键即可。</p>
+<h2 id="获取帮助"><a class="markdownIt-Anchor" href="#获取帮助">#</a> 获取帮助</h2>
+<p><code>Emacs</code>  是一个富文档编辑器（Self document, extensible editor），而下面的三种方法在学习 Emacs 的过程中也非常重要。他们分别是：</p>
+<table>
+<caption id="" style="caption-side: bottom">帮助相关快捷键</caption>
+<thead>
+<tr>
+<th style="text-align:left">快捷键</th>
+<th style="text-align:left">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-h c</span></td>
+<td style="text-align:left">显示快捷键的功能；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-h k</span></td>
+<td style="text-align:left">寻找快捷键对应函数的文档；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-h v</span></td>
+<td style="text-align:left">寻找变量的帮助信息；</td>
+</tr>
+<tr>
+<td style="text-align:left"><span class="kbd red">C-h f</span></td>
+<td style="text-align:left">寻找函数的帮助信息；</td>
+</tr>
+</tbody>
+</table>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://book.emacs-china.org/">Emacs 教程</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a target="_blank" rel="noopener" href="https://www.gnu.org/software/emacs/manual/html_mono/eintr.html">An Introduction to Programming in Emacs Lisp</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+<div class="tags"><a href="/tags/Computer-Science/" rel="tag"><i class="ic i-tag"></i>Computer-Science</a><a href="/tags/Emacs/" rel="tag"><i class="ic i-tag"></i>Emacs</a></div></div><footer><div class="meta"><span class="icon"><i class="ic i-eye"></i></span><span>此文章已被阅读次数:</span><span class="waline-pageview-count" id="twikoo_visitors" data-path="/Computer-Science/Emacs/emacs-learning-1/">正在加载...</span><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于</span><time title="修改时间：2022-07-26 13:36:52" itemprop="dateModified" datetime="2022-07-26T13:36:52+08:00">2022-07-26</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i>赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img loading="lazy" data-src="/assets/wechatpay_Linn.png" alt="Linn 微信支付"/><p>微信支付</p></div><div><img loading="lazy" data-src="/assets/alipay_Linn.png" alt="Linn 支付宝"/><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>Linn<i class="ic i-at"><em>@</em></i>林•初夏</li><li class="link"><strong>本文链接：</strong><a href="https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-1/" title="Emacs 学习（一）基本操作">https://linn-ylz.com/Computer-Science/Emacs/emacs-learning-1/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/Computer-Science/Programming-Pearls/chapter-1-cracking-the-oyster/" rel="prev" itemprop="url" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;YangLinzhuo&#x2F;yanglinzhuo.github.io@latest&#x2F;images&#x2F;article-cover&#x2F;img(89).webp" title="《编程珠玑》（一）——开篇"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>Programming-Pearls</span><h3>《编程珠玑》（一）——开篇</h3></a></div><div class="item right"><a href="/Computer-Science/Emacs/emacs-learning-2/" rel="next" itemprop="url" data-background-image="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;YangLinzhuo&#x2F;yanglinzhuo.github.io@latest&#x2F;images&#x2F;article-cover&#x2F;img(65).webp" title="Emacs 学习（二）配置自定义及插件"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>Emacs</span><h3>Emacs 学习（二）配置自定义及插件</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%84%E5%A4%87%E8%AF%B4%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text"> 预备说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">3.</span> <span class="toc-text"> 快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="toc-number">3.1.</span> <span class="toc-text"> 光标移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%8F%E5%B9%95%E7%A7%BB%E5%8A%A8"><span class="toc-number">3.2.</span> <span class="toc-text"> 屏幕移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6%E6%95%B0%E5%AD%97%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0"><span class="toc-number">3.3.</span> <span class="toc-text"> 接收数字作为参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">3.4.</span> <span class="toc-text"> 其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text"> 文本编辑操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-number">4.1.</span> <span class="toc-text"> 插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">4.2.</span> <span class="toc-text"> 删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E4%B8%AD"><span class="toc-number">4.3.</span> <span class="toc-text"> 选中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%98%E8%B4%B4"><span class="toc-number">4.4.</span> <span class="toc-text"> 粘贴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-number">4.5.</span> <span class="toc-text"> 搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%92%A4%E9%94%80"><span class="toc-number">4.6.</span> <span class="toc-text"> 撤销</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">4.7.</span> <span class="toc-text"> 文件操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">4.8.</span> <span class="toc-text"> 缓冲区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD-emacs"><span class="toc-number">4.9.</span> <span class="toc-text"> 关闭  Emacs</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="toc-number">5.</span> <span class="toc-text"> 扩展指令集</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3"><span class="toc-number">6.</span> <span class="toc-text"> 窗口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9"><span class="toc-number">6.1.</span> <span class="toc-text"> 获取帮助</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li  class="active"><a href="/Computer-Science/Emacs/emacs-learning-1/" rel="bookmark" title="Emacs 学习（一）基本操作">Emacs 学习（一）基本操作</a></li><li ><a href="/Computer-Science/Emacs/emacs-learning-2/" rel="bookmark" title="Emacs 学习（二）配置自定义及插件">Emacs 学习（二）配置自定义及插件</a></li><li ><a href="/Computer-Science/Emacs/emacs-learning-3/" rel="bookmark" title="Emacs 学习（三）Org-mode 学习">Emacs 学习（三）Org-mode 学习</a></li><li ><a href="/Computer-Science/Emacs/emacs-learning-4/" rel="bookmark" title="Emacs 学习（四）Emacs 详细配置">Emacs 学习（四）Emacs 详细配置</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="Linn" src="/assets/my_small_avatar.jpg"/><p class="name" itemprop="name">Linn</p><div class="description" itemprop="description"></div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">37</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">14</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">33</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/YangLinzhuo" class="item github" title="https:&#x2F;&#x2F;github.com&#x2F;YangLinzhuo"><i class="ic i-github"></i></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/yang-lin-zhuo" class="item zhihu" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yang-lin-zhuo"><i class="ic i-zhihu"></i></a><a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=279175670" class="item music" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;279175670"><i class="ic i-cloud-music"></i></a><a target="_blank" rel="noopener" href="https://weibo.com/linnylz" class="item weibo" title="https:&#x2F;&#x2F;weibo.com&#x2F;linnylz"><i class="ic i-weibo"></i></a><a target="_blank" rel="noopener" href="https://www.douban.com/people234187316/" class="item douban" title="https:&#x2F;&#x2F;www.douban.com&#x2F;people234187316&#x2F;"><i class="ic i-douban"></i></a><a href="mailto:yanglinzhuo@outlook.com" class="item email" title="mailto:yanglinzhuo@outlook.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item dropdown"><a href="/links/" rel="section"><i class="ic i-link"></i>links</a><ul class="submenu"><li class="item"><a href="/links/friend/" rel="section"><i class="ic i-heart"></i>友链</a></li><li class="item"><a href="/links/webstack/" rel="section"><i class="ic i-external-link-alt"></i>webstack</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/Computer-Science/Emacs/emacs-learning-2/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/Computer-Science/Programming-Pearls/chapter-1-cracking-the-oyster/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/History/" title="分类于History">History</a><i class="ic i-angle-right"></i><a href="/categories/History/ChineseHistory/" title="分类于ChineseHistory">ChineseHistory</a></div><span><a href="/History/Chinese-History/chinese-era-table/">中國歷史紀年表</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Programming-Pearls/" title="分类于Programming-Pearls">Programming-Pearls</a></div><span><a href="/Computer-Science/Programming-Pearls/chapter-0-introduction/">《编程珠玑》（零）——简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Emacs/" title="分类于Emacs">Emacs</a></div><span><a href="/Computer-Science/Emacs/emacs-learning-1/">Emacs 学习（一）基本操作</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Coding-Interviews/" title="分类于Coding-Interviews">Coding-Interviews</a></div><span><a href="/Computer-Science/Coding-Interviews/coding-interviews-10/">剑指 Offer （十）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Coding-Interviews/" title="分类于Coding-Interviews">Coding-Interviews</a></div><span><a href="/Computer-Science/Coding-Interviews/coding-interviews-4/">剑指 Offer （四）</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Emacs/" title="分类于Emacs">Emacs</a></div><span><a href="/Computer-Science/Emacs/emacs-learning-3/">Emacs 学习（三）Org-mode 学习</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Hexo/" title="分类于Hexo">Hexo</a></div><span><a href="/Hexo/blog-search-config/">Shoka 主题搜索功能修改</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Programming-Pearls/" title="分类于Programming-Pearls">Programming-Pearls</a></div><span><a href="/Computer-Science/Programming-Pearls/chapter-1-cracking-the-oyster/">《编程珠玑》（一）——开篇</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Configs/" title="分类于Configs">Configs</a></div><span><a href="/Computer-Science/Configs/wsl2-installation/">安装 WSL2</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Science/" title="分类于Computer-Science">Computer-Science</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Science/Coding-Interviews/" title="分类于Coding-Interviews">Coding-Interviews</a></div><span><a href="/Computer-Science/Coding-Interviews/coding-interviews-5/">剑指 Offer （五）</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="new-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2021 -<span itemprop="copyrightYear">2024</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">Linn @ Linn's Shoka</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">299k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">4:32</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL = {
+    ispost: true,
+        path: `Computer-Science/Emacs/emacs-learning-1/`,
+        favicon: {
+        show: `（●´3｀●）やれやれだぜ`,
+        hide: `(´Д｀)大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    copy_tex: true,
+    katex: true,
+    mermaid: false,
+    audio: undefined,
+    fancybox: true,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    },
+    ignores: [
+        (uri) => uri.includes('#'),
+        (uri) => new RegExp(LOCAL.path + '$').test(uri),
+            []
+    ]
+};
+</script><script src="https://s4.zstatic.net/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous" fetchpriority="high"></script><script src="https://s4.zstatic.net/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO&#x2F;+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn&#x2F;6Z&#x2F;hRTt8+pR6L4N2" crossorigin="anonymous" fetchpriority="high"></script><script src="/js/siteInit.js?v=0.4.16" type="module" fetchpriority="high" defer></script><!-- hexo injector body_end start --><script src="/assets/mmedia/mmedia-loader.js"></script><!-- hexo injector body_end end --></body></html>
