@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://linn-ylz.com</id>
+    <title>林•初夏 • Posts by &#34;essay&#34; category</title>
+    <link href="https://linn-ylz.com" />
+    <updated>2022-07-24T04:30:41.000Z</updated>
+    <category term="AncientBook" />
+    <category term="Book" />
+    <category term="Essay" />
+    <category term="Game" />
+    <category term="Music" />
+    <category term="Movie" />
+    <category term="Hexo" />
+    <category term="Valine" />
+    <category term="Waline" />
+    <category term="TiddlyWiki" />
+    <category term="Fishing" />
+    <category term="Computer-Science" />
+    <category term="Algorithm" />
+    <category term="Cpp" />
+    <category term="Binary-Search" />
+    <category term="CUDA" />
+    <category term="Coding-Interviews" />
+    <category term="Configs" />
+    <category term="WSL2" />
+    <category term="CLion" />
+    <category term="PyTorch" />
+    <category term="Oh-My-Zsh" />
+    <category term="Powershell" />
+    <category term="WSL" />
+    <category term="Emacs" />
+    <category term="Programming-Pearls" />
+    <category term="Python" />
+    <category term="YAML" />
+    <category term="dataclass" />
+    <category term="Type-Annotation" />
+    <category term="History" />
+    <category term="ChineseHistory" />
+    <category term="Table" />
+    <entry>
+        <id>https://linn-ylz.com/Essay/chinese-ancient-book/</id>
+        <title>中国古籍电子化尝试</title>
+        <link rel="alternate" href="https://linn-ylz.com/Essay/chinese-ancient-book/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;很早的时候就想着把一些中国的古籍进行电子化的尝试，原因主要有二：一是一些中国古籍实在是部头很大，携带阅读都不方便，尤其是历史方面的书籍，往往有多册，没有太多的空间能够容纳。二是现有的电子化文本中往往会存在一些错误，这让强迫症的我多少有些心痒，若能够自己动手就能够在阅读时对于发现的错误顺手改正。此外，现有的电子版往往也没有专名号，在阅读上会有一定的困难，因此，参照古籍的 PDF 版本进行校对，添加专名号之后在阅读上也能够起到一定的帮助。&lt;/p&gt;
+&lt;p&gt;话虽如此，进行电子化存在着许多的挑战，最主要的便是字体的问题。我国汉字历史悠久，数千年来大概有数万汉字的数量。由于 Unicode 编码和字体数量上限的问题，在古籍中往往存在一些无法显示的汉字，这种情况可以采用具有更大字库的字体。但终究还是存在一些漏网之鱼无法输入，这时候只能靠自己进行造字了。&lt;/p&gt;
+&lt;p&gt;机缘巧合之下，最近总算对以上各个问题有了一定的解决方案，至少对于我个人而言已经令人满意了。下文记录解决上述问题的方法，聊以备忘。&lt;/p&gt;
+&lt;h1 id=&#34;古籍文本来源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#古籍文本来源&#34;&gt;#&lt;/a&gt; 古籍文本来源&lt;/h1&gt;
+&lt;p&gt;如今网络上已经有非常多的古籍的电子文本了，但是其质量也是参差不齐，经过一定时间的寻找，目前发现的质量较好的版本是&lt;a href=&#34;http://www.sidneyluo.net/index.php&#34;&gt;漢川草廬&lt;/a&gt;的版本。对于无法输入的汉字，其采用的是图片的形式，而不是某些网站那样的错字，且版本较新。&lt;s&gt;《史记》粗看应该是对应中华书局 2013 年的新版本。&lt;/s&gt; 经过重新确认是商务印书馆的百衲本。&lt;a href=&#34;https://ancient-china-books.github.io/&#34;&gt;古籍索引&lt;/a&gt;也提供了古籍的 ePub 电子书，这个是之后制作电子书的基础版本。&lt;/p&gt;
+&lt;h1 id=&#34;字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h1&gt;
+&lt;p&gt;&lt;s&gt;字体选择上，目前的打算是选择 “方正辞源宋体”。其收字较多，且字形比较符合古代的情形。&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;目前网络上可以找到的较大的字体库可以参考这个&lt;a href=&#34;https://gist.github.com/dzcpy/dec6ca5c81e1700ff42864f63ea55230&#34;&gt;链接&lt;/a&gt;。经过考虑最后还是选择了&lt;a href=&#34;http://www.ancientbooks.cn/helpcore?font&#34;&gt;中华书局宋体&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;，不仅包含的字体数量较多，而且是方正转为中华数据设计的，和古籍的风格比较匹配，在绝大部分的场景下能够满足要求。对于极少数情况，字库中未包含的汉字可以通过现有收录的汉字的部件进行创造。通过 FontCreator 这一软件可以比较好的完成以上任务，使用现有的汉字的部件来拼凑出字库中未包含的汉字。尽管其他民间制作的超大型字库可能包含更多的汉字，但是由于版权原因，只能使用多个免费的字体进行组合来扩展字库，字体的风格并不统一，因此还是选择了自己动手，丰衣足食，需要自己造字的场景还是极少的，有需要的时候再动手也不用花费太多功夫。&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;对于网上的字库，需要注意版权问题。大多数字库是能被个人非商业使用的，因此如果有自己修改了字库的内容，最好不要和他人分享以免带来不必要的麻烦。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;专名号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#专名号&#34;&gt;#&lt;/a&gt; 专名号&lt;/h1&gt;
+&lt;p&gt;关于专名号，由于 ePub 的实质内容是网页，因此利用 CSS 中的  &lt;code&gt;text-decoration&lt;/code&gt;  属性可以比较轻松的实现。但是对于直线专名号，当两个专有名词连续时，直线在视觉上是连在一起的，可能造成误解，因此需要采用一种绕圈子的办法，利用 image 属性来完成，具体参考如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; none&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 0&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/* 横排使用以下属性 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1px solid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;linear-gradient&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;currentcolor&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; currentcolor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 1 0 / 1 0.1em&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/* 竖排使用以下属性 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1px solid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;linear-gradient&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;currentcolor&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; currentcolor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 0 1 / 0.1em 1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;而对于波浪线形式的书名号，则没有以上问题，采用  &lt;code&gt;CSS&lt;/code&gt;  默认的  &lt;code&gt;wavy&lt;/code&gt;  属性风格即可：&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration-line&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; underline&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration-style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; wavy&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-underline-position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; left&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 用于调整横线和文本的间距，竖排设置成 left，横排可以设置成 under*/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;section class=&#34;footnotes&#34;&gt;
+&lt;ol class=&#34;footnotes-list&#34;&gt;
+&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;中华书局宋体字体文件下载后包含三个字体文件，分别以 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;00&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;00&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;00&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;02&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;02&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;02&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;15&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;15&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 结尾，其中 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;00&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;00&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;00&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面包含  &lt;code&gt;Unicode&lt;/code&gt;  汉字基础区和  &lt;code&gt;A&lt;/code&gt;  扩展区的汉字，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;02&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;02&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;02&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面则包含  &lt;code&gt;B&lt;/code&gt; 、 &lt;code&gt;C&lt;/code&gt; 、 &lt;code&gt;D&lt;/code&gt; 、 &lt;code&gt;E&lt;/code&gt; 、 &lt;code&gt;F&lt;/code&gt;  等扩展区的汉字，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;15&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;15&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面则主要为古联自造字。 &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+        <category term="AncientBook" />
+        <category term="Book" />
+        <updated>2022-07-24T04:30:41.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://linn-ylz.com/Essay/essay/</id>
+        <title>杂感</title>
+        <link rel="alternate" href="https://linn-ylz.com/Essay/essay/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;时隔数个月，总算又重新敲打出这些文字。经过了几个月对毕业设计及其他相关事宜的处理之后，总算要踏上一段新的旅途了。现在也总算是在新城市安顿下来，再过段时间便也成为真正的社会人了。最近仍旧处在我自己设定的放假时间，通关了去年的新游戏《破晓传说》，周杰伦的新专辑也发售了，诸多事情，有感而发，遂有此文。&lt;/p&gt;
+&lt;h1 id=&#34;破晓传说&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#破晓传说&#34;&gt;#&lt;/a&gt; 破晓传说&lt;/h1&gt;
+&lt;p&gt;作为传说系列的最新作，破晓传说在成绩上是令人满意的，本作销量也超过了两百万，算是重新拯救了因为前作情热传说而濒临危险境地的这个 IP。综合来看，我个人对于本作是比较满意的。游戏的前半部分篇章在剧情的设计及节奏把控上都是非常不错的，场景设计也比较符合各个章节对应领将的属性。在战斗系统上，也非常流畅，个人玩起来的打击感非常不错，各种招式的动画效果也非常炫酷。&lt;/p&gt;
+&lt;p&gt;遗憾的是，后半部分的剧情内容明显节奏偏快，剧情信息密度过大，给人一种在疯狂弥补设定的感觉。后半部分的迷宫设计也明显没有之前的用心，大量的必须战斗对于人的耐心也是一种巨大的消耗。此外，BOSS 战斗几乎永久霸体的设定，加上针对玩家的仇恨锁定，使得我在后期难度较大的地图中的游玩过程明显没有前半部分那样的顺畅。&lt;/p&gt;
+&lt;p&gt;虽然如此，我个人还是比较推荐本作，尤其是在前半部分，在精美画面和人设的加持下，算是让我久违地体验到了 RPG 游戏带来的乐趣。在第一部分结束后的 OP2 也让人无比期待后续的剧情，可惜后半部分确实让人有些失望，但是瑕不掩瑜，最后也是 HE，值得一玩。&lt;/p&gt;
+&lt;p&gt;绚香演唱的 OP2 「Hello,Again～昔からある場所～」配合上飞碟社的动画，让我体验到了久违的沉浸感。雨景很好地契合了前一章节场景的特点，也渲染了一种怅惘的氛围，和歌词的部分也很好地结合了起来。绚香略带厚重的女声也让我不禁沉浸在其场景之后，之后几乎每次进游戏都要完整听一遍。这首歌其实 1995 年的一首歌曲，原曲明显节奏更加明快。经过改编后的现有版本和游戏画面契合度非常高，是非常不错的翻唱。&lt;/p&gt;
+&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-RgIdnyTyWZvfqpct&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1rP4y1Y7uc&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-RgIdnyTyWZvfqpct&#34;).style.height=document.getElementById(&#34;mmedia-RgIdnyTyWZvfqpct&#34;).scrollWidth*0.76+&#34;px&#34;;
+    window.onresize = function(){
+      document.getElementById(&#34;mmedia-RgIdnyTyWZvfqpct&#34;).style.height=document.getElementById(&#34;mmedia-RgIdnyTyWZvfqpct&#34;).scrollWidth*0.76+&#34;px&#34;;
+    }; &lt;/script&gt;
+&lt;h1 id=&#34;周杰伦&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#周杰伦&#34;&gt;#&lt;/a&gt; 周杰伦&lt;/h1&gt;
+&lt;p&gt;说起怀旧，马上就是周杰伦专辑《八度空间》20 周年了，而新专辑也已经发行。每当周杰伦发行新歌的时候，总有人会说江郎才尽了，不如以前了之类的。我不懂专业的音乐知识，无法从专业的角度进行评价。而在 20 年前，《八度空间》这张专辑在金曲奖上颗粒无收，就像周杰伦后来在《外婆》中唱的那样，只能在镜头前傻笑。&lt;/p&gt;
+&lt;p&gt;然而，在如今看来，《八度空间》的每首歌曲都有值得品鉴的地方。也许是回忆的滤镜使得人们对于过往的事物有着很高的评价，使得人们对于当前的新事物总是在评价上过于保守。就好像很多人发现，周杰伦的新歌过一段时间听之后仿佛又有新鲜的感觉。固然，和以前相比，周杰伦的心境已经发生了明显的变化，如今的他已经是华语乐坛的 “帝王”，创作的那种迫切感当然无法与年轻时候相比，但是如果我们拿这样的说辞去苛求他未免也有些过界了。音乐本就是一种众口难调的艺术，个人的阅历也会在我们聆听的时候带给我们不一样的感受。或许，我们可以过段时间再重新品尝一下新专辑的滋味。如果仍然觉得不合口味，那么适时怀旧又有何不可呢？&lt;/p&gt;
+&lt;p&gt;最后，推荐 B 站品鉴《八度空间》的这段视频作为结尾。&lt;/p&gt;
+&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-kMGciUCZVAeJIgIt&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1ya411Q7KU&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-kMGciUCZVAeJIgIt&#34;).style.height=document.getElementById(&#34;mmedia-kMGciUCZVAeJIgIt&#34;).scrollWidth*0.76+&#34;px&#34;;
+    window.onresize = function(){
+      document.getElementById(&#34;mmedia-kMGciUCZVAeJIgIt&#34;).style.height=document.getElementById(&#34;mmedia-kMGciUCZVAeJIgIt&#34;).scrollWidth*0.76+&#34;px&#34;;
+    }; &lt;/script&gt;
+</content>
+        <category term="Essay" />
+        <category term="Game" />
+        <category term="Music" />
+        <updated>2022-07-15T18:33:16.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://linn-ylz.com/Essay/love-letter/</id>
+        <title>岩井俊二的《情书》</title>
+        <link rel="alternate" href="https://linn-ylz.com/Essay/love-letter/"/>
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;B 站今天上线了岩井俊二的《情书》，今年不久前内地也重映过，趁着机会补上了很久之前就在计划中的这部影片。以前总是冲着某个宣传去看一部电影，现在更喜欢像这样在某段闲暇时间，在某个契机之下，一个人静静地，关掉弹幕，阅读一个新的故事。&lt;/p&gt;
+&lt;p&gt;《情书》在中国观众之中算是知名度非常高的电影了，作为岩井俊二的处女座，具有极高的水准。我并不知晓太多电影理论的内容，但是就个人的观感而言，电影的镜头非常的干净。尽管电影的节奏在大部分时间是舒缓的，却并没有给人以冗长之感。娓娓道来却又引人入胜。&lt;/p&gt;
+&lt;p&gt;情书的两大主题应该算是爱情和生死，这应该属于艺术作品中最重要的几个母题了。在影片中，这两个主题互相交织，贯穿始终。&lt;/p&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;本文中可能包含有剧透，请自行判断是否要阅读下面的内容。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;爱情&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#爱情&#34;&gt;#&lt;/a&gt; 爱情&lt;/h1&gt;
+&lt;p&gt;爱情应该是《情书》中最重要的主题。影片开始的部分博子躺在白茫茫的雪地上，屏住自己的呼吸，这是对逝去的恋人 ——（男）藤井树 —— 的追思，她在试着体会他死前的那种停止呼吸的感受。也正因为博子忘不了（男）藤井树，她才会尝试给那个本不存在的地址写信，从而阴差阳错的认识了（女）藤井树。这才有了之后的故事。这是博子对（男）藤井树的爱情。&lt;/p&gt;
+&lt;p&gt;秋叶是博子和（男）藤井树的好友，也一直喜欢着博子，却因为被（男）藤井树抢先，只能一直暗恋着博子。却又因为（男）树的死亡，最终得以与博子成为恋人，但是博子的心中依旧还放不下对（男）的情感。这是秋叶对博子的爱情。&lt;/p&gt;
+&lt;p&gt;（男）藤井树因为和（女）藤井树同名同姓，被班级里的同学恶作剧捉弄，却在之后慢慢喜欢上了（女）藤井树。但是（女）藤井树却因为迟钝，没能觉察到（男）树的这份心意。这是（男）藤井树的爱情。&lt;/p&gt;
+&lt;p&gt;这三段感情上的箭头在观众的眼中，似乎都是单向的。岩井俊二似乎在向观众表达一个观点：爱情是残酷的。&lt;/p&gt;
+&lt;p&gt;看完《情书》的观众在影片结束之后，必定会探讨一个问题，那就是（男）藤井树是否真的爱着博子？抑或博子只是（女）藤井树的一个替身？这个问题向来是影片的一个争论的焦点。很多观众都认为博子是（女）藤井树的替身 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;（男）藤井树渣男&lt;/span&gt;，对博子产生了很大的同情，然后就上升到了对（男）藤井树的批判。&lt;/p&gt;
+&lt;p&gt;确实，艺术作品在创作出来之后，便不属于它的原作者了。观众的解读只要合乎逻辑，那么存在即合理。但是我想这并不是岩井俊二的本意。从我的观点而言，岩井俊二想表现的，其实是一种 “遗憾”。&lt;/p&gt;
+&lt;p&gt;不妨按照时间顺序整理一下这三段感情。&lt;/p&gt;
+&lt;p&gt;最早的是两个藤井树之间的这段感情，它贯穿了全片，在影片的最后才完全地展现了两人之间的这段朦胧而又青涩的情感。（男）藤井树因为（女）藤井树的落泪而对恶作剧的同学大打出手，因为她对自己情感的误解而在放学路上用袋子 “袭击”，在无人问津的书籍的借阅卡上无数次写下藤井树的名字，在搬家之前将书籍托付给她。在观众的眼前，男方的这段感情是再显而易见不过了。而女方对南方的这段情感，直到影片的最后一秒才完全揭晓。（女）藤井树在后辈们的注视下，看见了（男）藤井树描绘的她的画像，她的脸上由平静转而惊讶，再到淡淡的悲伤，最后又是那种无处躲藏的羞涩，想着把借阅卡藏起来，却发现身上竟无一个口袋可寻。在短短的数秒内，她的内心必定涌上了各种复杂的情绪。也是在此时，观众们和她一道，确认了她对（男）藤井树的那份情感。当然，在之前的回忆中，其实可以看到，（女）藤井树对于（男）藤井树有一种淡淡的情愫：在图书馆的座位上，望着男生读书的侧脸，阳光照射在男生的脸上，明亮而又温暖 &lt;span class=&#34;spoiler&#34; title=&#34;...&#34;&gt;我想没有哪个女生能够拒绝柏原崇的盛世美颜&lt;/span&gt;，此时的镜头已经暗示了（女）藤井树心中的感情的萌动；在父亲去世后不久，男生来给她送书时，她脸上绽开的那股藏不住的笑容，目送男生离去时，将脸埋在书本之后的那股羞涩，这些很明显地表达出了女生的情感。本来是一段很美好的爱情，却因为男生的羞于启齿，女生的迟钝，直到多年以后，这根双向箭头才终于完成，只是已经阴阳两隔。&lt;/p&gt;
+&lt;p&gt;接下来应该是秋叶对博子的给感情。可能有人会觉得奇怪，他们不是在（男）树死后才开始的恋情吗？为什么时间顺序反而在前？其实秋叶在（男）树之前就已经喜欢上博子了，也是他第一个约博子见面，结果（男）树却一见钟情，抢先表白。所以这段感情一开始就充满着遗憾。如果自己抢先开口会如何？如果（男）树没有死去会怎样？或许三人的关系会完全是另一个样子。直到影片的最后，博子才最终放下了（男）树，这段感情也才最终有了结果。&lt;/p&gt;
+&lt;p&gt;而博子与（男）树的感情一开始就是由于遗憾开始的。（男）树没有收到（女）树的回复，因为相貌上的相似，便对博子一见钟情，没有人否认一开始（男）树在博子身上投射了他对（女）树的感情，也就是说，这段情感从一开始就是有缺陷的。（男）树的心中始终还有着（女）树的一个位置，在死去之前哼唱的那首歌曲，也是向南风寄托着自己的哀思。博子与（男）树的恋情本来已经快要修成正果，结果却因为（男）树的死戛然而止，几年之后依然未能完全放下。两个人在不同的时间抱有不同的遗憾。&lt;/p&gt;
+&lt;p&gt;所以，我认为岩井俊二展现的其实是人生中的遗憾，包括后续生死主题相关的表达上，其实也有这个意思包含其中。&lt;/p&gt;
+&lt;p&gt;那么，是否影片就是悲观地告诉你人生处处都是遗憾，让人悲观绝望呢？其实正相反，整部影片虽然有着悲伤的基调，但是并不是让人沉浸在悲伤之中，而是让人从过往的遗憾中走出。&lt;/p&gt;
+&lt;p&gt;博子最后在高山前呐喊，放下了对（男）树的那份执着。&lt;/p&gt;
+&lt;p&gt;秋叶最终也能够和博子相恋。&lt;/p&gt;
+&lt;p&gt;（女）树虽然在多年后才知晓（男）树的心意，才发现自己心中的那份情愫，看起来似乎让人无限遗憾和惆怅，但是从（女）树最后的那段没有寄出的信中，可以看到，她的心中更多的是一个女孩的羞涩，并没有陷入太多悲伤的情绪。在和博子的通信中，她渐渐回忆起了那段被自己封印起来的往事，在学校后辈的帮助下，发现了那段纯真的爱情。博子将（女）树的信件寄还给她，那些都是她的美好的回忆。从这个意义上而言，她是幸运的。&lt;/p&gt;
+&lt;p&gt;甚至就连爱慕秋叶的学生，也因为对秋叶和博子的感情，选择美好的祝福，而不是一直陷入在爱恨的纠葛之中。&lt;/p&gt;
+&lt;p&gt;那么（男）树呢？似乎他在死前，依然没能忘掉（女）树，他并没能走出过往的那段时光。其实不是，从（女）树的回忆中可以看到，他对不喜欢的女生是不会用正眼看待的。虽然一开始向博子提出交往确实包含了对（女）树的情感投射，但是从两人的感情最终能够走到谈婚论嫁的地步，以及求婚前那羞于启齿的表现来看，（男）树对博子的爱其实并不亚于对（女）树的感情。&lt;/p&gt;
+&lt;p&gt;在我的眼里，岩井俊二想表达的就是要学会从过往的遗憾中走出。但是这并不意味着要完全忘记过去。（男）树死前唱着他并不喜欢的松田圣子的歌，博子也依然对（男）树抱有着深深的情感，（女）树内心其实也还隐藏着对（男）树的淡淡情愫。这些都是他们的珍贵回忆，不会随着时光而完全消逝。这些也是支撑他们继续前行的动力。&lt;/p&gt;
+&lt;h1 id=&#34;生死&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生死&#34;&gt;#&lt;/a&gt; 生死&lt;/h1&gt;
+&lt;p&gt;影片中的死亡有两处，一处是（男）树的死，一处是（女）树父亲的死。正如我在 “爱情” 那一节中所写的，我认为岩井俊二想表达的就是希望人从过往的遗憾中走出，去面对后续的新生活。&lt;/p&gt;
+&lt;p&gt;（男）树的父母对于儿子的死去早已接受，父亲和前来祭拜的朋友一起喝酒，母亲装病回家，他们都已经适应了没有（男）树的生活，从丧子的悲痛中走出。&lt;/p&gt;
+&lt;p&gt;（女）树的家人们谈论起他父亲的死，也没有多少顾忌，还略微带着开玩笑的意味，“怎么可能会有因为感冒而死的人啊”。&lt;/p&gt;
+&lt;p&gt;但是博子和（女）树并没有从两人的死亡中走出，包括（女）树的母亲，也依然对没能及时将父亲送到医院的爷爷心存芥蒂，他们内心都留有深深的遗憾。博子没能完全放下对（男）树的感情，不能很好地接受秋叶的爱情，（女）树有着对医院的抗拒，而这份抗拒差点让她自己像父亲一样死去。（女）树的目前因为丈夫的死，不愿让爷爷背着（女）树前往医院。他们内心都还有着一段无法完全放下的过去。&lt;/p&gt;
+&lt;p&gt;但是，到影片的最后，博子放下了对（男）树的感情，（女）树开启了那段尘封的记忆，找回了自己过去的回忆。这些是她们走出过去的一个象征。尽管过去有着种种遗憾，但是生活依旧还要向前。当内心的心结被解开之后，人们才能更好的面对未来的生活。我想这是岩井俊二想传达给观众的。&lt;/p&gt;
+&lt;h1 id=&#34;题外话&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#题外话&#34;&gt;#&lt;/a&gt; 题外话&lt;/h1&gt;
+&lt;h2 id=&#34;关于中山美穗&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于中山美穗&#34;&gt;#&lt;/a&gt; 关于中山美穗&lt;/h2&gt;
+&lt;p&gt;影片中的（女）藤井树和博子均由中山美穗扮演，但其实在观看过程中一直以为是两个不同的扮演者。大概是由于两个角色的气质和性格有比较大的距离，这个也侧面表现了中山美穗本人在影片中的演技精湛。在当红时期，和 WANDS 一起演唱过「世界中は誰よりきっと」这首歌曲，也算是 WANDS 的名曲了。&lt;/p&gt;
+&lt;p&gt;中山美穗有一个妹妹中山忍，和李连杰主演过《精武英雄》，可能一些中国观众会有印象。&lt;/p&gt;
+&lt;h2 id=&#34;关于柏原崇&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于柏原崇&#34;&gt;#&lt;/a&gt; 关于柏原崇&lt;/h2&gt;
+&lt;p&gt;柏原崇被称为 “世纪末最后的美少年”。确实，图书馆的那个读书的场景，以及搬家前给（女）树送书的画面，非常有一种「少年感」。&lt;/p&gt;
+</content>
+        <category term="Essay" />
+        <category term="Movie" />
+        <updated>2021-09-29T16:30:29.000Z</updated>
+    </entry>
+</feed>
