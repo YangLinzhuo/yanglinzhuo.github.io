@@ -22,26 +22,26 @@
         <category>Algorithm</category>
         <category>Cpp</category>
         <category>Binary-Search</category>
+        <category>Coding-Interviews</category>
         <category>CUDA</category>
         <category>Configs</category>
+        <category>WSL2</category>
+        <category>CLion</category>
+        <category>PyTorch</category>
         <category>Powershell</category>
+        <category>Oh-My-Zsh</category>
         <category>WSL</category>
         <category>Emacs</category>
-        <category>Coding-Interviews</category>
         <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
         <category>dataclass</category>
         <category>Type-Annotation</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
-        <category>WSL2</category>
-        <category>CUTLASS</category>
-        <category>CUTE</category>
-        <category>CLion</category>
-        <category>PyTorch</category>
-        <category>Oh-My-Zsh</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/CUDA/CUTLASS/cute-layout/</guid>
             <title>CUTLASS 中的 CuTe Layout</title>
@@ -2416,17 +2416,17 @@ appendWindowsPath = false
 &lt;p&gt;遗憾的是，后半部分的剧情内容明显节奏偏快，剧情信息密度过大，给人一种在疯狂弥补设定的感觉。后半部分的迷宫设计也明显没有之前的用心，大量的必须战斗对于人的耐心也是一种巨大的消耗。此外，BOSS 战斗几乎永久霸体的设定，加上针对玩家的仇恨锁定，使得我在后期难度较大的地图中的游玩过程明显没有前半部分那样的顺畅。&lt;/p&gt;
 &lt;p&gt;虽然如此，我个人还是比较推荐本作，尤其是在前半部分，在精美画面和人设的加持下，算是让我久违地体验到了 RPG 游戏带来的乐趣。在第一部分结束后的 OP2 也让人无比期待后续的剧情，可惜后半部分确实让人有些失望，但是瑕不掩瑜，最后也是 HE，值得一玩。&lt;/p&gt;
 &lt;p&gt;绚香演唱的 OP2 「Hello,Again～昔からある場所～」配合上飞碟社的动画，让我体验到了久违的沉浸感。雨景很好地契合了前一章节场景的特点，也渲染了一种怅惘的氛围，和歌词的部分也很好地结合了起来。绚香略带厚重的女声也让我不禁沉浸在其场景之后，之后几乎每次进游戏都要完整听一遍。这首歌其实 1995 年的一首歌曲，原曲明显节奏更加明快。经过改编后的现有版本和游戏画面契合度非常高，是非常不错的翻唱。&lt;/p&gt;
-&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-SvgRnJeAyYKZVOZf&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1rP4y1Y7uc&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-SvgRnJeAyYKZVOZf&#34;).style.height=document.getElementById(&#34;mmedia-SvgRnJeAyYKZVOZf&#34;).scrollWidth*0.76+&#34;px&#34;;
+&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-sjlBAGRoWGCveFKc&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1rP4y1Y7uc&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-sjlBAGRoWGCveFKc&#34;).style.height=document.getElementById(&#34;mmedia-sjlBAGRoWGCveFKc&#34;).scrollWidth*0.76+&#34;px&#34;;
     window.onresize = function(){
-      document.getElementById(&#34;mmedia-SvgRnJeAyYKZVOZf&#34;).style.height=document.getElementById(&#34;mmedia-SvgRnJeAyYKZVOZf&#34;).scrollWidth*0.76+&#34;px&#34;;
+      document.getElementById(&#34;mmedia-sjlBAGRoWGCveFKc&#34;).style.height=document.getElementById(&#34;mmedia-sjlBAGRoWGCveFKc&#34;).scrollWidth*0.76+&#34;px&#34;;
     }; &lt;/script&gt;
 &lt;h1 id=&#34;周杰伦&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#周杰伦&#34;&gt;#&lt;/a&gt; 周杰伦&lt;/h1&gt;
 &lt;p&gt;说起怀旧，马上就是周杰伦专辑《八度空间》20 周年了，而新专辑也已经发行。每当周杰伦发行新歌的时候，总有人会说江郎才尽了，不如以前了之类的。我不懂专业的音乐知识，无法从专业的角度进行评价。而在 20 年前，《八度空间》这张专辑在金曲奖上颗粒无收，就像周杰伦后来在《外婆》中唱的那样，只能在镜头前傻笑。&lt;/p&gt;
 &lt;p&gt;然而，在如今看来，《八度空间》的每首歌曲都有值得品鉴的地方。也许是回忆的滤镜使得人们对于过往的事物有着很高的评价，使得人们对于当前的新事物总是在评价上过于保守。就好像很多人发现，周杰伦的新歌过一段时间听之后仿佛又有新鲜的感觉。固然，和以前相比，周杰伦的心境已经发生了明显的变化，如今的他已经是华语乐坛的 “帝王”，创作的那种迫切感当然无法与年轻时候相比，但是如果我们拿这样的说辞去苛求他未免也有些过界了。音乐本就是一种众口难调的艺术，个人的阅历也会在我们聆听的时候带给我们不一样的感受。或许，我们可以过段时间再重新品尝一下新专辑的滋味。如果仍然觉得不合口味，那么适时怀旧又有何不可呢？&lt;/p&gt;
 &lt;p&gt;最后，推荐 B 站品鉴《八度空间》的这段视频作为结尾。&lt;/p&gt;
-&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-TdobWvuUQfbnoBEV&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1ya411Q7KU&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-TdobWvuUQfbnoBEV&#34;).style.height=document.getElementById(&#34;mmedia-TdobWvuUQfbnoBEV&#34;).scrollWidth*0.76+&#34;px&#34;;
+&lt;style&gt;.bbplayer{width: 80%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-vZxpqKBKYwALYNQU&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1ya411Q7KU&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-vZxpqKBKYwALYNQU&#34;).style.height=document.getElementById(&#34;mmedia-vZxpqKBKYwALYNQU&#34;).scrollWidth*0.76+&#34;px&#34;;
     window.onresize = function(){
-      document.getElementById(&#34;mmedia-TdobWvuUQfbnoBEV&#34;).style.height=document.getElementById(&#34;mmedia-TdobWvuUQfbnoBEV&#34;).scrollWidth*0.76+&#34;px&#34;;
+      document.getElementById(&#34;mmedia-vZxpqKBKYwALYNQU&#34;).style.height=document.getElementById(&#34;mmedia-vZxpqKBKYwALYNQU&#34;).scrollWidth*0.76+&#34;px&#34;;
     }; &lt;/script&gt;
  ]]></description>
         </item>
@@ -5068,9 +5068,9 @@ Term 2
   {% mmedia &#34;bilibili&#34; &#34;bvid:1G64y1t7G9&#34; &#34;danmaku:false&#34; %}
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;bvid&lt;/code&gt;  填写视频的  &lt;code&gt;BV&lt;/code&gt;  号， &lt;code&gt;danmaku&lt;/code&gt;  控制视频是否显示弹幕。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;style&gt;.bbplayer{width: 100%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-lfDqXIAOcTHKOljr&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1G64y1t7G9&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).style.height=document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).scrollWidth*0.76+&#34;px&#34;;
+&lt;style&gt;.bbplayer{width: 100%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-HhneQlHQQAcZQkqa&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1G64y1t7G9&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-HhneQlHQQAcZQkqa&#34;).style.height=document.getElementById(&#34;mmedia-HhneQlHQQAcZQkqa&#34;).scrollWidth*0.76+&#34;px&#34;;
     window.onresize = function(){
-      document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).style.height=document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).scrollWidth*0.76+&#34;px&#34;;
+      document.getElementById(&#34;mmedia-HhneQlHQQAcZQkqa&#34;).style.height=document.getElementById(&#34;mmedia-HhneQlHQQAcZQkqa&#34;).scrollWidth*0.76+&#34;px&#34;;
     }; &lt;/script&gt;
 &lt;h2 id=&#34;数学公式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学公式&#34;&gt;#&lt;/a&gt; 数学公式&lt;/h2&gt;
 &lt;p&gt;本功能基于  &lt;code&gt;markdown-it-katex&lt;/code&gt; ，需要在  &lt;code&gt;Front Matter&lt;/code&gt;  中添加  &lt;code&gt;math: true&lt;/code&gt;  以支持&lt;a href=&#34;https://katex.org/&#34;&gt; KaTex&lt;/a&gt;。从搜索的结果来看， &lt;code&gt;KaTex&lt;/code&gt;  不完全支持  &lt;code&gt;LaTex&lt;/code&gt;  的语法，不过目前暂时没发现大的问题，而且目前支持  &lt;code&gt;MathJax&lt;/code&gt;  的  &lt;code&gt;hexo-math&lt;/code&gt;  插件好像也有些许  &lt;code&gt;bug&lt;/code&gt; 。后续如果有功能无法满足的时候再考虑更换  &lt;code&gt;MathJax&lt;/code&gt; ，姑且先使用  &lt;code&gt;KaTex&lt;/code&gt; 。&lt;/p&gt;

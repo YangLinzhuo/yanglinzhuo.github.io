@@ -19,26 +19,26 @@
     <category term="Algorithm" />
     <category term="Cpp" />
     <category term="Binary-Search" />
+    <category term="Coding-Interviews" />
     <category term="CUDA" />
     <category term="Configs" />
+    <category term="WSL2" />
+    <category term="CLion" />
+    <category term="PyTorch" />
     <category term="Powershell" />
+    <category term="Oh-My-Zsh" />
     <category term="WSL" />
     <category term="Emacs" />
-    <category term="Coding-Interviews" />
     <category term="Programming-Pearls" />
     <category term="Python" />
     <category term="YAML" />
     <category term="dataclass" />
     <category term="Type-Annotation" />
+    <category term="CUTLASS" />
+    <category term="CUTE" />
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
-    <category term="WSL2" />
-    <category term="CUTLASS" />
-    <category term="CUTE" />
-    <category term="CLion" />
-    <category term="PyTorch" />
-    <category term="Oh-My-Zsh" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Python/dataclass-and-YAML-transform/</id>
         <title>dataclass 与 YAML 的相互转换</title>
