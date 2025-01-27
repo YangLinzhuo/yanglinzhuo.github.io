@@ -23,15 +23,11 @@
         <category>Cpp</category>
         <category>Binary-Search</category>
         <category>CUDA</category>
-        <category>Coding-Interviews</category>
         <category>Configs</category>
-        <category>WSL2</category>
-        <category>CLion</category>
-        <category>PyTorch</category>
-        <category>Oh-My-Zsh</category>
         <category>Powershell</category>
         <category>WSL</category>
         <category>Emacs</category>
+        <category>Coding-Interviews</category>
         <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
@@ -40,8 +36,12 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>WSL2</category>
         <category>CUTLASS</category>
         <category>CUTE</category>
+        <category>CLion</category>
+        <category>PyTorch</category>
+        <category>Oh-My-Zsh</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Hexo/transfer-waline-2/</guid>
             <title>ShokaX 主题迁移</title>
@@ -974,9 +974,9 @@ Term 2
   {% mmedia &#34;bilibili&#34; &#34;bvid:1G64y1t7G9&#34; &#34;danmaku:false&#34; %}
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;bvid&lt;/code&gt;  填写视频的  &lt;code&gt;BV&lt;/code&gt;  号， &lt;code&gt;danmaku&lt;/code&gt;  控制视频是否显示弹幕。&lt;/p&gt;
 &lt;p&gt;效果如下：&lt;/p&gt;
-&lt;style&gt;.bbplayer{width: 100%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-KkefGEHlulKiwMPE&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1G64y1t7G9&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-KkefGEHlulKiwMPE&#34;).style.height=document.getElementById(&#34;mmedia-KkefGEHlulKiwMPE&#34;).scrollWidth*0.76+&#34;px&#34;;
+&lt;style&gt;.bbplayer{width: 100%; max-width: 850px; margin: auto}&lt;/style&gt;&lt;div class=&#34;bbplayer&#34;&gt;&lt;iframe class=&#34;bbplayer&#34; id=&#34;mmedia-lfDqXIAOcTHKOljr&#34; src=&#34;https://player.bilibili.com/player.html?bvid=1G64y1t7G9&amp;page=1&amp;high_quality=1&amp;danmaku=false&amp;autoplay=0&#34; allowfullscreen=&#34;allowfullscreen&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;0&#34; framespacing=&#34;0&#34; sandbox=&#34;allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups&#34;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;script&gt; document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).style.height=document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).scrollWidth*0.76+&#34;px&#34;;
     window.onresize = function(){
-      document.getElementById(&#34;mmedia-KkefGEHlulKiwMPE&#34;).style.height=document.getElementById(&#34;mmedia-KkefGEHlulKiwMPE&#34;).scrollWidth*0.76+&#34;px&#34;;
+      document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).style.height=document.getElementById(&#34;mmedia-lfDqXIAOcTHKOljr&#34;).scrollWidth*0.76+&#34;px&#34;;
     }; &lt;/script&gt;
 &lt;h2 id=&#34;数学公式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学公式&#34;&gt;#&lt;/a&gt; 数学公式&lt;/h2&gt;
 &lt;p&gt;本功能基于  &lt;code&gt;markdown-it-katex&lt;/code&gt; ，需要在  &lt;code&gt;Front Matter&lt;/code&gt;  中添加  &lt;code&gt;math: true&lt;/code&gt;  以支持&lt;a href=&#34;https://katex.org/&#34;&gt; KaTex&lt;/a&gt;。从搜索的结果来看， &lt;code&gt;KaTex&lt;/code&gt;  不完全支持  &lt;code&gt;LaTex&lt;/code&gt;  的语法，不过目前暂时没发现大的问题，而且目前支持  &lt;code&gt;MathJax&lt;/code&gt;  的  &lt;code&gt;hexo-math&lt;/code&gt;  插件好像也有些许  &lt;code&gt;bug&lt;/code&gt; 。后续如果有功能无法满足的时候再考虑更换  &lt;code&gt;MathJax&lt;/code&gt; ，姑且先使用  &lt;code&gt;KaTex&lt;/code&gt; 。&lt;/p&gt;

@@ -20,15 +20,11 @@
     <category term="Cpp" />
     <category term="Binary-Search" />
     <category term="CUDA" />
-    <category term="Coding-Interviews" />
     <category term="Configs" />
-    <category term="WSL2" />
-    <category term="CLion" />
-    <category term="PyTorch" />
-    <category term="Oh-My-Zsh" />
     <category term="Powershell" />
     <category term="WSL" />
     <category term="Emacs" />
+    <category term="Coding-Interviews" />
     <category term="Programming-Pearls" />
     <category term="Python" />
     <category term="YAML" />
@@ -37,8 +33,12 @@
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
+    <category term="WSL2" />
     <category term="CUTLASS" />
     <category term="CUTE" />
+    <category term="CLion" />
+    <category term="PyTorch" />
+    <category term="Oh-My-Zsh" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/</id>
         <title>安装 WSL2</title>
