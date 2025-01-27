@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;chinesehistory&#34; tag</title>
         <link>https://linn-ylz.com</link>
-        <description>Linn&#39;s Personal Blog Site</description>
+        <description>Linn 的个人博客</description>
         <language>zh-CN</language>
         <pubDate>Sun, 07 Aug 2022 10:58:31 +0800</pubDate>
         <lastBuildDate>Sun, 07 Aug 2022 10:58:31 +0800</lastBuildDate>
@@ -22,26 +22,26 @@
         <category>Algorithm</category>
         <category>Cpp</category>
         <category>Binary-Search</category>
-        <category>Coding-Interviews</category>
-        <category>CUDA</category>
-        <category>Configs</category>
-        <category>WSL2</category>
-        <category>CLion</category>
-        <category>PyTorch</category>
-        <category>Powershell</category>
-        <category>Oh-My-Zsh</category>
-        <category>WSL</category>
         <category>Emacs</category>
         <category>Programming-Pearls</category>
         <category>Python</category>
         <category>YAML</category>
         <category>dataclass</category>
         <category>Type-Annotation</category>
-        <category>CUTLASS</category>
-        <category>CUTE</category>
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUDA</category>
+        <category>Coding-Interviews</category>
+        <category>Configs</category>
+        <category>WSL2</category>
+        <category>CLion</category>
+        <category>PyTorch</category>
+        <category>Oh-My-Zsh</category>
+        <category>Powershell</category>
+        <category>WSL</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/History/Chinese-History/chinese-era-table/</guid>
             <title>中國歷史紀年表</title>
