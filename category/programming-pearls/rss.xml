@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;programming-pearls&#34; category</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Sun, 09 Jan 2022 15:42:58 +0800</pubDate>
         <lastBuildDate>Sun, 09 Jan 2022 15:42:58 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Programming-Pearls/chapter-1-cracking-the-oyster/</guid>
             <title>《编程珠玑》（一）——开篇</title>

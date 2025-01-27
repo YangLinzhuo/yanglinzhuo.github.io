@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;tiddlywiki&#34; category</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Mon, 08 Aug 2022 22:22:30 +0800</pubDate>
         <lastBuildDate>Mon, 08 Aug 2022 22:22:30 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/TiddlyWiki/tiddlywiki-fishing/</guid>
             <title>TiddlyWiki 渐进学习插件 Fishing</title>

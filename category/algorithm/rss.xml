@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;algorithm&#34; category</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Sat, 21 Oct 2023 09:58:50 +0800</pubDate>
         <lastBuildDate>Sat, 21 Oct 2023 09:58:50 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Algorithm/binary-search-revision/</guid>
             <title>二分搜索再探</title>

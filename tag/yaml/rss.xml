@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;yaml&#34; tag</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Thu, 10 Nov 2022 23:17:33 +0800</pubDate>
         <lastBuildDate>Thu, 10 Nov 2022 23:17:33 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Python/dataclass-and-YAML-transform/</guid>
             <title>dataclass 与 YAML 的相互转换</title>

@@ -37,6 +37,8 @@
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
+    <category term="CUTLASS" />
+    <category term="CUTE" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Python/dataclass-and-YAML-transform/</id>
         <title>dataclass 与 YAML 的相互转换</title>

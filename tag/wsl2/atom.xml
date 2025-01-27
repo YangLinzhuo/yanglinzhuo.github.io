@@ -37,6 +37,8 @@
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
+    <category term="CUTLASS" />
+    <category term="CUTE" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Configs/wsl2-installation/</id>
         <title>安装 WSL2</title>

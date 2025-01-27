@@ -37,6 +37,8 @@
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
+    <category term="CUTLASS" />
+    <category term="CUTE" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Algorithm/binary-search-revision/</id>
         <title>二分搜索再探</title>

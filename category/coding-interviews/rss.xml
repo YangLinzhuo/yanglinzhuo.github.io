@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;coding-interviews&#34; category</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Fri, 01 Oct 2021 20:10:18 +0800</pubDate>
         <lastBuildDate>Fri, 01 Oct 2021 20:10:18 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Coding-Interviews/coding-interviews-11/</guid>
             <title>剑指 Offer （十一）</title>

@@ -3,7 +3,7 @@
     <channel>
         <title>林•初夏 • Posts by &#34;python&#34; tag</title>
         <link>https://linn-ylz.com</link>
-        <description></description>
+        <description>Linn&#39;s Personal Blog Site</description>
         <language>zh-CN</language>
         <pubDate>Thu, 22 Jun 2023 10:39:47 +0800</pubDate>
         <lastBuildDate>Thu, 22 Jun 2023 10:39:47 +0800</lastBuildDate>
@@ -40,6 +40,8 @@
         <category>History</category>
         <category>ChineseHistory</category>
         <category>Table</category>
+        <category>CUTLASS</category>
+        <category>CUTE</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Computer-Science/Python/python-type-annotations-and-custom-types/</guid>
             <title>Python 类型注释及自定义类型</title>

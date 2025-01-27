@@ -37,6 +37,8 @@
     <category term="History" />
     <category term="ChineseHistory" />
     <category term="Table" />
+    <category term="CUTLASS" />
+    <category term="CUTE" />
     <entry>
         <id>https://linn-ylz.com/Computer-Science/Configs/oh-my-zsh-and-plugins/</id>
         <title>Oh My Zsh 及插件配置</title>
