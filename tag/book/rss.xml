@@ -22,15 +22,6 @@
         <category>Algorithm</category>
         <category>Cpp</category>
         <category>Binary-Search</category>
-        <category>Emacs</category>
-        <category>Programming-Pearls</category>
-        <category>Python</category>
-        <category>YAML</category>
-        <category>dataclass</category>
-        <category>Type-Annotation</category>
-        <category>History</category>
-        <category>ChineseHistory</category>
-        <category>Table</category>
         <category>CUDA</category>
         <category>Coding-Interviews</category>
         <category>Configs</category>
@@ -40,8 +31,17 @@
         <category>Oh-My-Zsh</category>
         <category>Powershell</category>
         <category>WSL</category>
+        <category>Emacs</category>
+        <category>Programming-Pearls</category>
+        <category>Python</category>
+        <category>YAML</category>
+        <category>dataclass</category>
+        <category>Type-Annotation</category>
         <category>CUTLASS</category>
         <category>CUTE</category>
+        <category>History</category>
+        <category>ChineseHistory</category>
+        <category>Table</category>
         <item>
             <guid isPermalink="true">https://linn-ylz.com/Essay/chinese-ancient-book/</guid>
             <title>中国古籍电子化尝试</title>
@@ -49,22 +49,39 @@
             <category>AncientBook</category>
             <category>Book</category>
             <pubDate>Sun, 24 Jul 2022 12:30:41 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;很早的时候就想着把一些中国的古籍进行电子化的尝试，原因主要有二：一是一些中国古籍实在是部头很大，携带阅读都不方便，尤其是历史方面的书籍，往往有多册，没有太多的空间能够容纳。二是现有的电子化文本中往往会存在一些错误，这让强迫症的我多少有些心痒，若能够自己动手就能够在阅读时对于发现的错误顺手改正。此外，现有的电子版往往也没有专名号，在阅读上会有一定的困难，因此，参照古籍的 PDF 版本进行校对，添加专名号之后在阅读上也能够起到一定的帮助。&lt;/p&gt;
 &lt;p&gt;话虽如此，进行电子化存在着许多的挑战，最主要的便是字体的问题。我国汉字历史悠久，数千年来大概有数万汉字的数量。由于 Unicode 编码和字体数量上限的问题，在古籍中往往存在一些无法显示的汉字，这种情况可以采用具有更大字库的字体。但终究还是存在一些漏网之鱼无法输入，这时候只能靠自己进行造字了。&lt;/p&gt;
 &lt;p&gt;机缘巧合之下，最近总算对以上各个问题有了一定的解决方案，至少对于我个人而言已经令人满意了。下文记录解决上述问题的方法，聊以备忘。&lt;/p&gt;
-&lt;h1 id=&#34;古籍文本来源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#古籍文本来源&#34;&gt;#&lt;/a&gt; 古籍文本来源&lt;/h1&gt;
+&lt;h1 id=&#34;古籍文本来源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#古籍文本来源&#34;&gt;#&lt;/a&gt; 古籍文本来源&lt;/h1&gt;
 &lt;p&gt;如今网络上已经有非常多的古籍的电子文本了，但是其质量也是参差不齐，经过一定时间的寻找，目前发现的质量较好的版本是&lt;a href=&#34;http://www.sidneyluo.net/index.php&#34;&gt;漢川草廬&lt;/a&gt;的版本。对于无法输入的汉字，其采用的是图片的形式，而不是某些网站那样的错字，且版本较新。&lt;s&gt;《史记》粗看应该是对应中华书局 2013 年的新版本。&lt;/s&gt; 经过重新确认是商务印书馆的百衲本。&lt;a href=&#34;https://ancient-china-books.github.io/&#34;&gt;古籍索引&lt;/a&gt;也提供了古籍的 ePub 电子书，这个是之后制作电子书的基础版本。&lt;/p&gt;
-&lt;h1 id=&#34;字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h1&gt;
+&lt;h1 id=&#34;字体&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h1&gt;
 &lt;p&gt;&lt;s&gt;字体选择上，目前的打算是选择 “方正辞源宋体”。其收字较多，且字形比较符合古代的情形。&lt;/s&gt;&lt;/p&gt;
 &lt;p&gt;目前网络上可以找到的较大的字体库可以参考这个&lt;a href=&#34;https://gist.github.com/dzcpy/dec6ca5c81e1700ff42864f63ea55230&#34;&gt;链接&lt;/a&gt;。经过考虑最后还是选择了&lt;a href=&#34;http://www.ancientbooks.cn/helpcore?font&#34;&gt;中华书局宋体&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;，不仅包含的字体数量较多，而且是方正转为中华数据设计的，和古籍的风格比较匹配，在绝大部分的场景下能够满足要求。对于极少数情况，字库中未包含的汉字可以通过现有收录的汉字的部件进行创造。通过 FontCreator 这一软件可以比较好的完成以上任务，使用现有的汉字的部件来拼凑出字库中未包含的汉字。尽管其他民间制作的超大型字库可能包含更多的汉字，但是由于版权原因，只能使用多个免费的字体进行组合来扩展字库，字体的风格并不统一，因此还是选择了自己动手，丰衣足食，需要自己造字的场景还是极少的，有需要的时候再动手也不用花费太多功夫。&lt;/p&gt;
 &lt;div class=&#34;note warning&#34;&gt;
 &lt;p&gt;对于网上的字库，需要注意版权问题。大多数字库是能被个人非商业使用的，因此如果有自己修改了字库的内容，最好不要和他人分享以免带来不必要的麻烦。&lt;/p&gt;
 &lt;/div&gt;
-&lt;h1 id=&#34;专名号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#专名号&#34;&gt;#&lt;/a&gt; 专名号&lt;/h1&gt;
+&lt;h1 id=&#34;专名号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#专名号&#34;&gt;#&lt;/a&gt; 专名号&lt;/h1&gt;
 &lt;p&gt;关于专名号，由于 ePub 的实质内容是网页，因此利用 CSS 中的  &lt;code&gt;text-decoration&lt;/code&gt;  属性可以比较轻松的实现。但是对于直线专名号，当两个专有名词连续时，直线在视觉上是连在一起的，可能造成误解，因此需要采用一种绕圈子的办法，利用 image 属性来完成，具体参考如下：&lt;/p&gt;
-&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; none&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 0&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/* 横排使用以下属性 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1px solid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;linear-gradient&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;currentcolor&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; currentcolor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 1 0 / 1 0.1em&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/* 竖排使用以下属性 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1px solid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;border-image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;linear-gradient&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;currentcolor&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; currentcolor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 0 1 / 0.1em 1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;而对于波浪线形式的书名号，则没有以上问题，采用  &lt;code&gt;CSS&lt;/code&gt;  默认的  &lt;code&gt;wavy&lt;/code&gt;  属性风格即可：&lt;/p&gt;
-&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration-line&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; underline&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-decoration-style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; wavy&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token property&#34;&gt;text-underline-position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; left&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 用于调整横线和文本的间距，竖排设置成 left，横排可以设置成 under*/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;u &amp;#123;
+    text-decoration: none;
+    border: 0;
+    /*横排使用以下属性*/
+    border-bottom: 1px solid;
+    border-image: linear-gradient(currentcolor, currentcolor) 1 0 / 1 0.1em;
+    /*竖排使用以下属性*/
+    border-left: 1px solid;
+    border-image: linear-gradient(currentcolor, currentcolor) 0 1 / 0.1em 1;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而对于波浪线形式的书名号，则没有以上问题，采用  &lt;code&gt;CSS&lt;/code&gt;  默认的  &lt;code&gt;wavy&lt;/code&gt;  属性风格即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;w &amp;#123;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-position: left; /* 用于调整横线和文本的间距，竖排设置成 left，横排可以设置成 under*/
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr class=&#34;footnotes-sep&#34; /&gt;
 &lt;section class=&#34;footnotes&#34;&gt;
 &lt;ol class=&#34;footnotes-list&#34;&gt;
 &lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;中华书局宋体字体文件下载后包含三个字体文件，分别以 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;00&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;00&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;00&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;02&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;02&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;02&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;15&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;15&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 结尾，其中 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;00&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;00&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;00&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面包含  &lt;code&gt;Unicode&lt;/code&gt;  汉字基础区和  &lt;code&gt;A&lt;/code&gt;  扩展区的汉字，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;02&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;02&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;02&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面则包含  &lt;code&gt;B&lt;/code&gt; 、 &lt;code&gt;C&lt;/code&gt; 、 &lt;code&gt;D&lt;/code&gt; 、 &lt;code&gt;E&lt;/code&gt; 、 &lt;code&gt;F&lt;/code&gt;  等扩展区的汉字，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;15&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;15&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.6444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 平面则主要为古联自造字。 &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;

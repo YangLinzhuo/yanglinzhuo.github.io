@@ -19,15 +19,6 @@
     <category term="Algorithm" />
     <category term="Cpp" />
     <category term="Binary-Search" />
-    <category term="Emacs" />
-    <category term="Programming-Pearls" />
-    <category term="Python" />
-    <category term="YAML" />
-    <category term="dataclass" />
-    <category term="Type-Annotation" />
-    <category term="History" />
-    <category term="ChineseHistory" />
-    <category term="Table" />
     <category term="CUDA" />
     <category term="Coding-Interviews" />
     <category term="Configs" />
@@ -37,30 +28,50 @@
     <category term="Oh-My-Zsh" />
     <category term="Powershell" />
     <category term="WSL" />
+    <category term="Emacs" />
+    <category term="Programming-Pearls" />
+    <category term="Python" />
+    <category term="YAML" />
+    <category term="dataclass" />
+    <category term="Type-Annotation" />
     <category term="CUTLASS" />
     <category term="CUTE" />
+    <category term="History" />
+    <category term="ChineseHistory" />
+    <category term="Table" />
     <entry>
         <id>https://linn-ylz.com/TiddlyWiki/tiddlywiki-fishing/</id>
         <title>TiddlyWiki 渐进学习插件 Fishing</title>
         <link rel="alternate" href="https://linn-ylz.com/TiddlyWiki/tiddlywiki-fishing/"/>
-        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;TiddlyWiki&lt;/code&gt;  是一款非常好的用于制作个人  &lt;code&gt;Wiki&lt;/code&gt;  的软件。除此以外，结合其他各种插件，还能够实现许多丰富的功能。例如， &lt;code&gt;Fishing&lt;/code&gt;  插件是用于  &lt;code&gt;TiddlyWiki&lt;/code&gt;  的一款类  &lt;code&gt;Anki&lt;/code&gt;  的软件，用于帮助复习各种知识。&lt;/p&gt;
-&lt;h1 id=&#34;在-tiddlywiki-xp-中集成-fishing-插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在-tiddlywiki-xp-中集成-fishing-插件&#34;&gt;#&lt;/a&gt; 在 TiddlyWiki xp 中集成 Fishing 插件&lt;/h1&gt;
-&lt;h2 id=&#34;下载-fishing-插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-fishing-插件&#34;&gt;#&lt;/a&gt; 下载 Fishing 插件&lt;/h2&gt;
+&lt;h1 id=&#34;在-tiddlywiki-xp-中集成-fishing-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#在-tiddlywiki-xp-中集成-fishing-插件&#34;&gt;#&lt;/a&gt; 在 TiddlyWiki xp 中集成 Fishing 插件&lt;/h1&gt;
+&lt;h2 id=&#34;下载-fishing-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载-fishing-插件&#34;&gt;#&lt;/a&gt; 下载 Fishing 插件&lt;/h2&gt;
 &lt;p&gt;由于作者提供的  &lt;code&gt;TiddlyWiki&lt;/code&gt;  是其封装的版本，而我个人使用的是  &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  这一版本，因此需要找到其中插件相关的内容再进行导入。&lt;/p&gt;
 &lt;p&gt;以下提供两种方法，这里推荐方法一，因为它能够较为及时地更新，方法二则需要自己手动更新。&lt;/p&gt;
-&lt;h2 id=&#34;方法一推荐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法一推荐&#34;&gt;#&lt;/a&gt; 方法一（推荐）&lt;/h2&gt;
+&lt;h2 id=&#34;方法一推荐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法一推荐&#34;&gt;#&lt;/a&gt; 方法一（推荐）&lt;/h2&gt;
 &lt;p&gt;推荐使用  &lt;code&gt;TW-CPL&lt;/code&gt;  进行安装，其&lt;a href=&#34;https://tw-cpl.netlify.app/#Index:Index&#34;&gt;官网&lt;/a&gt;提供了许多的  &lt;code&gt;TiddlyWiki&lt;/code&gt;  插件。参照官网的方法，将网址导入到自己的  &lt;code&gt;TiddlyWiki&lt;/code&gt;  中即可使用该插件库搜索并安装相应的插件。&lt;/p&gt;
 &lt;p&gt;在导入完毕后，按照  &lt;code&gt;控制台-插件-获取更多插件-太微中文社区插件源（GitHub版）-开启插件程式库&lt;/code&gt;  的顺序进入插件浏览列表，在其中搜索  &lt;code&gt;Fishing&lt;/code&gt;  即可找到插件，然后点击安装即可。注意该插件有配套的多个插件，不要漏掉。&lt;/p&gt;
-&lt;h3 id=&#34;方法二&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法二&#34;&gt;#&lt;/a&gt; 方法二&lt;/h3&gt;
+&lt;h3 id=&#34;方法二&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法二&#34;&gt;#&lt;/a&gt; 方法二&lt;/h3&gt;
 &lt;p&gt;在作者的 &lt;a href=&#34;https://github.com/oflg&#34;&gt; &lt;code&gt;GitHub&lt;/code&gt;  主页&lt;/a&gt; 下载以下插件，放入到  &lt;code&gt;MyPluginStore&lt;/code&gt;  文件夹之下。然后在  &lt;code&gt;xp&lt;/code&gt;  文件夹下的  &lt;code&gt;tiddlywiki.info&lt;/code&gt;  文件中的  &lt;code&gt;plugins&lt;/code&gt;  中添加以下内容。&lt;/p&gt;
-&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;figcaption data-lang=&#34;markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing-analysis&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing-cannedfish&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing-catchfish&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing-twpub&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;oflg/fishing-zh-Hans&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;其他插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他插件&#34;&gt;#&lt;/a&gt; 其他插件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;&amp;quot;oflg/fishing&amp;quot;,
+&amp;quot;oflg/fishing-analysis&amp;quot;,
+&amp;quot;oflg/fishing-cannedfish&amp;quot;,
+&amp;quot;oflg/fishing-catchfish&amp;quot;,
+&amp;quot;oflg/fishing-twpub&amp;quot;,
+&amp;quot;oflg/fishing-zh-Hans&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;其他插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他插件&#34;&gt;#&lt;/a&gt; 其他插件&lt;/h3&gt;
 &lt;p&gt;除了上述插件之外， &lt;code&gt;Fishing&lt;/code&gt;  插件还需要额外安装以下插件：&lt;/p&gt;
-&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;figcaption data-lang=&#34;markdown&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#34;tiddlywiki/dynannotate&#34;,&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&#34;tiddlywiki/dynaview&#34;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这两个插件是  &lt;code&gt;TiddlyWiki&lt;/code&gt;  得官方插件，在  &lt;code&gt;tiddlywiki.info&lt;/code&gt;  中添加上述两行即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;	&amp;quot;tiddlywiki/dynannotate&amp;quot;,
+	&amp;quot;tiddlywiki/dynaview&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个插件是  &lt;code&gt;TiddlyWiki&lt;/code&gt;  得官方插件，在  &lt;code&gt;tiddlywiki.info&lt;/code&gt;  中添加上述两行即可。&lt;/p&gt;
 &lt;p&gt;此外，还有  &lt;code&gt;ECharts&lt;/code&gt;  插件需要安装，可以按照方法一在插件库中搜索安装。&lt;/p&gt;
-&lt;h3 id=&#34;不兼容问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#不兼容问题&#34;&gt;#&lt;/a&gt; 不兼容问题&lt;/h3&gt;
+&lt;h3 id=&#34;不兼容问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不兼容问题&#34;&gt;#&lt;/a&gt; 不兼容问题&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;TiddlyWiki xp&lt;/code&gt;  中得  &lt;code&gt;tobibeer/preview&lt;/code&gt;  以及  &lt;code&gt;tobibeer/appear&lt;/code&gt;  插件与  &lt;code&gt;Fishing&lt;/code&gt;  插件存在冲突。因为基本上用不到弹窗功能，禁用这两个插件即可， &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  作者本人也在后续版本中去除了这两个插件。&lt;/p&gt;
-&lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
+&lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
 &lt;p&gt;安装  &lt;code&gt;Fishing&lt;/code&gt;  插件完成后，在需要记忆的条目中添加  &lt;code&gt;?&lt;/code&gt;  标签即可加入到学习任务中。注意是半角的问号。其他功能可以参考&lt;a href=&#34;https://tiddlymemo.org/&#34;&gt;官方教程&lt;/a&gt;学习。&lt;/p&gt;
 </content>
         <category term="TiddlyWiki" />
@@ -71,18 +82,22 @@
         <id>https://linn-ylz.com/TiddlyWiki/tilddlywiki-intro/</id>
         <title>TiddlyWiki 介绍</title>
         <link rel="alternate" href="https://linn-ylz.com/TiddlyWiki/tilddlywiki-intro/"/>
-        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;TiddlyWiki&lt;/code&gt;  是一款受欢迎的个人  &lt;code&gt;Wiki&lt;/code&gt;  制作交互式工具。 &lt;code&gt;TiddlyWiki&lt;/code&gt;  通过最小的有意义的语义块 —— &lt;code&gt;tiddlers&lt;/code&gt; （条目）来构建自己的知识库。通过标题唯一标记  &lt;code&gt;tiddlers&lt;/code&gt; ，以便可以使用链接、标签、列表和宏进行结构化。条目（ &lt;code&gt;Tiddlers&lt;/code&gt; ）使用维基文本（ &lt;code&gt;WikiText&lt;/code&gt; ）符号，能够简明扼要地表示了各种文本格式和超文本功能。具体可以参考&lt;a href=&#34;https://tiddlywiki.com/&#34;&gt;官方网站&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;虽然  &lt;code&gt;TiddlyWiki&lt;/code&gt;  本身是个非常有用的工具，可配置程度很高，但是上手难度也较大。这里比较推荐使用  &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  上手，可以戳此&lt;a href=&#34;https://keatonlao.github.io/tiddlywiki-xp/&#34;&gt;链接&lt;/a&gt;。 &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  本身配置了较多有用的插件，省却了自己动手配置的麻烦。同时，该  &lt;code&gt;Wiki&lt;/code&gt;  中包含了丰富的教程，可以不断阅读深入了解该工具的使用方法。&lt;/p&gt;
-&lt;h1 id=&#34;安装与启动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装与启动&#34;&gt;#&lt;/a&gt; 安装与启动&lt;/h1&gt;
+&lt;h1 id=&#34;安装与启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装与启动&#34;&gt;#&lt;/a&gt; 安装与启动&lt;/h1&gt;
 &lt;p&gt;安装  &lt;code&gt;TiddlyWiki&lt;/code&gt;  有多种方法。可以选择单一的  &lt;code&gt;html&lt;/code&gt;  文件进行编辑，但是这样当以后内容过多时，文件体积便会较大，打开编辑时也会有不便。因此我选择了使用  &lt;code&gt;Node.js&lt;/code&gt;  进行安装。因为安装过  &lt;code&gt;Hexo&lt;/code&gt; ，所以  &lt;code&gt;Node.js&lt;/code&gt;  的相关配置已经做好，只需要通过以下命令直接安装即可：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; tiddlywiki&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输入  &lt;code&gt;tiddlywiki --version&lt;/code&gt;  能够看到版本号则说明成功安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install -g tiddlywiki
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入  &lt;code&gt;tiddlywiki --version&lt;/code&gt;  能够看到版本号则说明成功安装。&lt;/p&gt;
 &lt;p&gt;之后下载  &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  的压缩包并解压，然后  &lt;code&gt;cd&lt;/code&gt;  到该文件夹下，其中应当包含  &lt;code&gt;xp&lt;/code&gt;  和  &lt;code&gt;MyPluginStore&lt;/code&gt;  两个文件夹。&lt;/p&gt;
 &lt;p&gt;通过  &lt;code&gt;tiddlywiki xp --server&lt;/code&gt;  可以启动服务，在浏览器中输入  &lt;code&gt;localhost:8080&lt;/code&gt;  即可访问网页。不过，现在看到的网页还并不完全，网页显示的内容也仅占据左边的部分，右边产生了许多的空白。这是因为  &lt;code&gt;TiddlyWiki xp&lt;/code&gt;  配置了许多插件，输入  &lt;code&gt;tiddlywiki xp --server&lt;/code&gt;  命令后，不出意外应该会看到许多插件无法加载的警告。&lt;/p&gt;
 &lt;p&gt;在这里，我们需要把存放了插件的文件夹  &lt;code&gt;MyPluginStore&lt;/code&gt;  添加到环境变量中。之后，上述报错应当消除，网页也能够正常显示了。&lt;/p&gt;
-&lt;h1 id=&#34;和博客进行搭配&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#和博客进行搭配&#34;&gt;#&lt;/a&gt; 和博客进行搭配&lt;/h1&gt;
+&lt;h1 id=&#34;和博客进行搭配&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#和博客进行搭配&#34;&gt;#&lt;/a&gt; 和博客进行搭配&lt;/h1&gt;
 &lt;p&gt;通过以上步骤我们能够成功启动  &lt;code&gt;TiddlyWiki&lt;/code&gt;  的服务并进行编辑，但是还无法和我们的博客进行结合。当我们将需要的内容编辑完毕之后，需要使用以下指令进行构建：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tiddlywiki xp &lt;span class=&#34;token parameter variable&#34;&gt;--build&lt;/span&gt; index&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;该指令会在  &lt;code&gt;xp/output/&lt;/code&gt;  文件夹之下产生一个  &lt;code&gt;index.html&lt;/code&gt;  文件，将该网页文件放在博客构建完成的文件夹下即可在博客中进行访问。我个人在博客的  &lt;code&gt;source&lt;/code&gt;  文件夹下创建了  &lt;code&gt;wiki&lt;/code&gt;  文件夹，在其中添加了  &lt;code&gt;index.md&lt;/code&gt;  文件以生成  &lt;code&gt;index.html&lt;/code&gt;  文件，并在首页侧栏添加了对应的图标和入口。在博客构建完成之后，使用  &lt;code&gt;tiddlywiki&lt;/code&gt;  指令生成的  &lt;code&gt;index.html&lt;/code&gt;  替换即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tiddlywiki xp --build index
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;该指令会在  &lt;code&gt;xp/output/&lt;/code&gt;  文件夹之下产生一个  &lt;code&gt;index.html&lt;/code&gt;  文件，将该网页文件放在博客构建完成的文件夹下即可在博客中进行访问。我个人在博客的  &lt;code&gt;source&lt;/code&gt;  文件夹下创建了  &lt;code&gt;wiki&lt;/code&gt;  文件夹，在其中添加了  &lt;code&gt;index.md&lt;/code&gt;  文件以生成  &lt;code&gt;index.html&lt;/code&gt;  文件，并在首页侧栏添加了对应的图标和入口。在博客构建完成之后，使用  &lt;code&gt;tiddlywiki&lt;/code&gt;  指令生成的  &lt;code&gt;index.html&lt;/code&gt;  替换即可。&lt;/p&gt;
 &lt;p&gt;通过以上方式即可在博客中添加  &lt;code&gt;Wiki&lt;/code&gt;  的入口。&lt;/p&gt;
 </content>
         <category term="Hexo" />
